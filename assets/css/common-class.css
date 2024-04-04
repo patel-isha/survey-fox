@@ -1,0 +1,36 @@
+/* colors */
+.title-color {
+    color: #151328;
+}
+
+.orange {
+    color: #F3842D;
+}
+
+/* background colors */
+.bg-theme {
+    background-color: #151328;
+}
+
+/* margin */
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+/* extra css classes */
+.none {
+    display: none;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.br8 {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
