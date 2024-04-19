@@ -34,7 +34,7 @@
     <!-- ============================================================== -->
     <div class="splash-container">
         <div class="card">
-            <div class="card-header text-center"><img class="logo-img" src="../images/logo.png"  width="150px" alt="logo"><span class="splash-description">Please enter your user information.</span></div>
+            <div class="card-header text-center"><img class="logo-img" src="../assets/img/logo/logo.png"  width="150px" alt="logo"><span class="splash-description">Please enter your user information.</span></div>
             <div class="card-body">
                 <form>
                     <p>Don't worry, we'll send you an email to reset your password.</p>
