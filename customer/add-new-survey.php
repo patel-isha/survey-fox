@@ -1,6 +1,5 @@
 <!doctype html>
 
-
 <html lang="en">
 <?php include 'includes/header.php'; ?>
 
@@ -27,8 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Code to add survey data
         // sql query to insert data into the database
         $sql = "INSERT INTO tbl_surveys (Name, Description, CategoryId,  CustomerId, CreatedDate, QuestionType) 
-                                VALUES ('$SurveyTitle', '$Desc', b'0', b'$CustomerId', current_timestamp(), '$selectedOption');";
+                                VALUES ('$SurveyTitle', '$Desc', '0', '$CustomerId', current_timestamp(), '$selectedOption');";
 
+        echo $sql;
         //execute the query
         if ($conn->query($sql) === TRUE) {
 

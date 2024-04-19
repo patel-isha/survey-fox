@@ -12,7 +12,84 @@ $LoginID = $_SESSION['customer_uid'];
 $CategoryId = 0;
 
 ?>
+<?php
+    // Check if the form is submitted and the 'id' parameter is set
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['id'])) {
 
+
+        if (isset($_POST["btnAddQue"])) {
+            // Code to add survey data
+            $Question = $_POST['txtQuestion'];
+            $Type = $_POST['ddlType'];
+            $OptionText = $_POST['txtOptions'];
+            $Surveyid = $_GET['id'];
+
+            if ($Type != 'Textbox' && strlen($OptionText) < 1) {
+                echo "<script>";
+                echo "alert('Option text value is missing!')";
+                echo "</script>";
+            } else {
+
+                // sql query to insert data into the database
+                $sql = "INSERT INTO question_master (Question, CategoryId, isPredefined, CustomerId, Type, OptionText, CreatedDate, Surveyid) 
+            VALUES ('$Question', '$CategoryId', b'0', '$LoginID', '$Type','$OptionText', current_timestamp(), '$Surveyid');";
+
+                //execute the query
+                if ($conn->query($sql) === TRUE) {
+
+                    // Get the ID of the inserted row
+                    $insertedId = $conn->insert_id;
+
+                    echo "<script>";
+                    echo "alert('Question Added!')";
+                    echo "</script>";
+
+                }
+            }
+
+        }
+
+        // Check if the 'id' parameter is set in the POST request
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+
+            // Perform the deletion in the database -- delete mate
+            $deleteSql = "DELETE FROM question_master WHERE Qid = $id";
+
+            // Perform the deletion in the database -- soft delete mate
+            //$deleteSql = "update tbl_owners set isDeleted=1 WHERE LoginId = $id"; //not working correctly
+    
+            if ($conn->query($deleteSql) === TRUE) {
+                echo "Row deleted successfully";
+            } else {
+                echo "Error deleting row: " . $conn->error;
+            }
+        }
+
+
+        if (isset($_POST["btnSubmit"])) {
+            // Code to save survey data
+            $SurveyTitle = $_POST['txtName'];
+            $Desc = $_POST['txtDesc'];
+
+            $updateSql = "update tbl_surveys set Name='$SurveyTitle', Description='$Desc' where Surveyid=$id;";
+            //execute the query
+            if ($conn->query($updateSql) === TRUE) {
+                echo "<script>";
+                echo "alert('Updated survey details!');";
+                echo "window.location='survey-view-all.php'";
+                echo "</script>";
+            }
+        }
+
+
+        // header("Location: owner-view-all.php");
+    
+    } else {
+        echo "Invalid request. Please submit the form.";
+    }
+
+    ?>
 
 <head>
     <style>
@@ -206,7 +283,8 @@ $CategoryId = 0;
 
                                                 <div class="form-row mb-2">
                                                     <?php
-                                                    $sql = "SELECT * FROM question_master WHERE isPredefined=0 and CustomerId=$LoginID ";
+                                                    $SIds = $_GET['id'];
+                                                    $sql = "SELECT * FROM question_master WHERE isPredefined=0 and CustomerId=$LoginID and Surveyid=$SIds; ";
 
                                                     $result = $conn->query($sql);
 
@@ -368,83 +446,7 @@ $CategoryId = 0;
 
 
 
-    <?php
-    // Check if the form is submitted and the 'id' parameter is set
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_GET['id'])) {
-
-
-        if (isset($_POST["btnAddQue"])) {
-            // Code to add survey data
-            $Question = $_POST['txtQuestion'];
-            $Type = $_POST['ddlType'];
-            $OptionText = $_POST['txtOptions'];
-
-            if ($Type != 'Textbox' && strlen($OptionText) < 1) {
-                echo "<script>";
-                echo "alert('Option text value is missing!')";
-                echo "</script>";
-            } else {
-
-                // sql query to insert data into the database
-                $sql = "INSERT INTO question_master (Question, CategoryId, isPredefined, CustomerId, Type, OptionText, CreatedDate) 
-            VALUES ('$Question', '$CategoryId', b'0', '$LoginID', '$Type','$OptionText', current_timestamp());";
-
-                //execute the query
-                if ($conn->query($sql) === TRUE) {
-
-                    // Get the ID of the inserted row
-                    $insertedId = $conn->insert_id;
-
-                    echo "<script>";
-                    echo "alert('Question Added!')";
-                    echo "</script>";
-
-                }
-            }
-
-        }
-
-        // Check if the 'id' parameter is set in the POST request
-        if (isset($_POST['id'])) {
-            $id = $_POST['id'];
-
-            // Perform the deletion in the database -- delete mate
-            $deleteSql = "DELETE FROM question_master WHERE Qid = $id";
-
-            // Perform the deletion in the database -- soft delete mate
-            //$deleteSql = "update tbl_owners set isDeleted=1 WHERE LoginId = $id"; //not working correctly
     
-            if ($conn->query($deleteSql) === TRUE) {
-                echo "Row deleted successfully";
-            } else {
-                echo "Error deleting row: " . $conn->error;
-            }
-        }
-
-
-        if (isset($_POST["btnSubmit"])) {
-            // Code to save survey data
-            $SurveyTitle = $_POST['txtName'];
-            $Desc = $_POST['txtDesc'];
-
-            $updateSql = "update tbl_surveys set Name='$SurveyTitle', Description='$Desc' where Surveyid=$id;";
-            //execute the query
-            if ($conn->query($updateSql) === TRUE) {
-                echo "<script>";
-                echo "alert('Updated survey details!');";
-                echo "window.location='survey-view-all.php'";
-                echo "</script>";
-            }
-        }
-
-
-        // header("Location: owner-view-all.php");
-    
-    } else {
-        echo "Invalid request. Please submit the form.";
-    }
-
-    ?>
 
 </body>
 
