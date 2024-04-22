@@ -3,9 +3,22 @@
     padding: 0;
 }
 
-html {
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+.container-fluid {
+    height: 100%;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* Adjust other necessary parent containers if needed */
+
+/* Add additional CSS rules as needed to target specific elements causing extra space */
 
 /*Background color*/
 #grad1 {
