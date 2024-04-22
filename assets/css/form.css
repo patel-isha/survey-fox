@@ -136,6 +136,8 @@ input[type=checkbox], input[type=radio] {
     margin: 10px 5px;
 }
 
+
+
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
@@ -176,6 +178,7 @@ select.list-dt:focus {
     margin-bottom: 30px;
     overflow: hidden;
     color: lightgrey;
+    display: flex;
 }
 
 #progressbar .active {
@@ -191,6 +194,9 @@ select.list-dt:focus {
 }
 
 /*Numbers in the ProgressBar*/
+#progressbar #step0:before {
+    content: "Start";
+}
 #progressbar #step1:before {
     content: "1"
 }
@@ -205,6 +211,12 @@ select.list-dt:focus {
 
 #progressbar #step4:before {
     content: "4"
+}
+#progressbar #step5:before {
+    content: "5"
+}
+#progressbar #step6:before {
+    content: "6"
 }
 
 /*ProgressBar before any progress*/
@@ -275,3 +287,22 @@ input[type="radio"]:checked + .radio-label img {
 .radio-button-img:hover{
     box-shadow: 1px 1px 8px #151328;
 }
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
