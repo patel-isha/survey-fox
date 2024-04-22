@@ -49,6 +49,13 @@ html, body {
     position: relative;
 }
 
+#msform fieldset .landing-img {
+    width: 70%!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+
 #msform fieldset {
     background: white;
     border: 0 none;
@@ -318,4 +325,3 @@ input[type="radio"]:checked + .radio-label img {
     overflow: hidden;
     transform: translateY(-50%);    
 }
-

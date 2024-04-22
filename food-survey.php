@@ -42,7 +42,7 @@ include 'include/header-links.php';
 
                                     </div>
                                 </div>
-                                    <div class="form-card">
+                                    <div class="form-card landing-img">
 
                                             <img src="assets/img/logo/landing.png"alt="Description of the image" style="width: 100%; height: auto;">
 
@@ -245,6 +245,15 @@ include 'include/header-links.php';
                                                 <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                             </div>
                                         </div>
+                                        <div class="row justify-content-center mt-3">
+        <div class="col-6 text-center">
+        
+            <a href="congrats-page.php?openModal=true" class="next action-button" data-toggle="modal" data-target="#myModal">Open To see your Winnings</a>
+            <!-- Inside the form -->
+<input type="hidden" id="openModalBtn">
+
+        </div>
+    </div>
                                         <br><br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
