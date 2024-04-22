@@ -54,36 +54,11 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color">1) How frequently do you dine at restaurants or consume food outside of your home?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Multiple Times a week</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Once a week</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Few times a month</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Rarely or Never</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color">2) What type of cuisine do you enjoy the most?</h6>
-                                            <div class="radio">
-                                                <label><input type="checkbox" name="optradio">Continental</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input type="checkbox" name="optradio">Asian</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input type="checkbox" name="optradio">American</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input type="checkbox" name="optradio">British</label>
-                                            </div>
-                                            <div class="radio">
-                                                <label><input type="checkbox" name="optradio">Others</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="next" class="next action-button" value="Next" />
@@ -92,30 +67,11 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">3) How do you prefer to book your accommodations or dining reservations?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Online platforms</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Directly through calls</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Through third party booking websites</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Through agents</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">4) Do you have a dietary preferences?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Vegan</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Vegetarian</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Non-Vegetarian</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -125,33 +81,11 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">5) How do you rate your overall dining experience of your most recent visit to a restaurant?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Excellent</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Good</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Average</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Below Average</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">6)	What are your expectations when dining out?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Cost-effectiveness</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Taste and quality of food</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Ambenience/atmosphere of the restaurant</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Trying new or unique culinary experiences</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -161,33 +95,11 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">7) How do you prefer to provide feedback to restaurants?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Word of Mouth</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Social Media</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Online review platforms</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Food blogs</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">8) Which type of hospitality establishments do you mostly prefer?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Cost-effectiveness</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Taste and quality of food</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Ambenience/atmosphere of the restaurant</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Trying new or unique culinary experiences</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -197,39 +109,11 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">9) What amenities or services do you value the most when staying over?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Free Wi-Fi</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Complimentary breakfast</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Fitness center</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Concierge services</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Other</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color">10) How important is exceptional customer service in the food industry?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Extremely important</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Somewhat important</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Neutral</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Not very important</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="radio" value="">Not important at all</label>
-                                            </div>
+                                            <textarea class="form-control" rows="3"></textarea>
 
                                         </div>
                                     </div>
