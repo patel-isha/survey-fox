@@ -5,7 +5,7 @@ include "../config/connection.php";
 $CategoryId = $_GET['id'];
 
 // SQL query to fetch data from question_master table based on category ID
-$sql = "SELECT * FROM question_master WHERE CategoryId = $CategoryId and isPredefined='1'";
+$sql = "SELECT * FROM question_master WHERE CategoryId = $CategoryId and isPredefined='1' ";
 
 $result = $conn->query($sql);
 

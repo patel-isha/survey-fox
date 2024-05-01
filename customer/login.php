@@ -60,6 +60,10 @@ if (isset($_POST['txtUsername'])) {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
+    .colBlack {
+        background: #151328;
+    }
     </style>
 </head>
 
@@ -67,9 +71,9 @@ if (isset($_POST['txtUsername'])) {
     <!-- ============================================================== -->
     <!-- login page  -->
     <!-- ============================================================== -->
-    <div class="splash-container">
-        <div class="card ">
-            <div class="card-header text-center"><a href="../index.php"><img class="logo-img" src="../images/logo.png" alt="logo" width="150px"></a><span class="splash-description">Customer Portal</span></div>
+    <div class="splash-container ">
+        <div class="card colBlack">
+            <div class="card-header text-center colBlack"><a href="../index.php"><img class="logo-img" src="../assets/img/logo/logo.png" alt="logo" width="150px"></a><span class="splash-description">Customer Portal</span></div>
             <div class="card-body">
             <span class="text-danger">
                     <?php if (isset($error_message))
