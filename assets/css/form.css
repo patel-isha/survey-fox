@@ -163,6 +163,26 @@ input[type=checkbox], input[type=radio] {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
 }
 
+
+/*Danger Buttons*/
+#msform .action-button-danger {
+    width: 120px;
+    background: #f2756f;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-danger:hover,
+#msform .action-button-danger:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
+
 /*Dropdown List Exp Date*/
 select.list-dt {
     border: none;
@@ -237,6 +257,10 @@ select.list-dt:focus {
 }
 #progressbar #step6:before {
     content: "6"
+}
+
+#progressbar #step7:before {
+    content: "7"
 }
 
 /*ProgressBar before any progress*/
