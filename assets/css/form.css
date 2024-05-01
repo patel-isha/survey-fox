@@ -3,9 +3,22 @@
     padding: 0;
 }
 
-html {
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+.container-fluid {
+    height: 100%;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* Adjust other necessary parent containers if needed */
+
+/* Add additional CSS rules as needed to target specific elements causing extra space */
 
 /*Background color*/
 #grad1 {
@@ -35,6 +48,13 @@ html {
     /*stacking fieldsets above each other*/
     position: relative;
 }
+
+#msform fieldset .landing-img {
+    width: 70%!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
 
 #msform fieldset {
     background: white;
@@ -136,10 +156,32 @@ input[type=checkbox], input[type=radio] {
     margin: 10px 5px;
 }
 
+
+
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
     box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
 }
+
+
+/*Danger Buttons*/
+#msform .action-button-danger {
+    width: 120px;
+    background: #f2756f;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-danger:hover,
+#msform .action-button-danger:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
 
 /*Dropdown List Exp Date*/
 select.list-dt {
@@ -176,6 +218,7 @@ select.list-dt:focus {
     margin-bottom: 30px;
     overflow: hidden;
     color: lightgrey;
+    display: flex;
 }
 
 #progressbar .active {
@@ -191,6 +234,9 @@ select.list-dt:focus {
 }
 
 /*Numbers in the ProgressBar*/
+#progressbar #step0:before {
+    content: "Start";
+}
 #progressbar #step1:before {
     content: "1"
 }
@@ -205,6 +251,17 @@ select.list-dt:focus {
 
 #progressbar #step4:before {
     content: "4"
+}
+#progressbar #step5:before {
+    content: "5"
+}
+
+#progressbar #step6:before {
+    content: "6"
+}
+
+#progressbar #step7:before {
+    content: "7"
 }
 
 /*ProgressBar before any progress*/
@@ -274,4 +331,22 @@ input[type="radio"]:checked + .radio-label img {
 
 .radio-button-img:hover{
     box-shadow: 1px 1px 8px #151328;
+}
+
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
 }
