@@ -25,16 +25,40 @@ include 'include/header-links.php';
                             <form id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
-                                    <li class="active" id="step1"></li>
+                                    <li class="active" id="step0"></li>
+                                    <li id="step1"></li>
                                     <li id="step2"></li>
                                     <li id="step3"></li>
                                     <li id="step4"></li>
                                     <li id="step5"></li>
                                     <li id="step6"></li>
+                                    <li id="step7"></li>
                                 </ul>
                                 <h2 class="title-color"><strong>Travel <span class="orange">Survey</span></strong></h2>
                                 <!-- fieldsets -->
                                 <fieldset>
+                                    <div class="form-card text-center pb-0">
+                                        <h2 class="tagline text-center mb-2">Explore Your Travel Preferences: </h2>
+                                        <h2 class="tagline orange text-center"> Start Your Journey Now!</h2>
+                                        <img src="assets/img/begin-survey.jpg" class="w-50">
+                                    </div>
+                                    <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
+                                </fieldset>
+                                <fieldset name="step1">
+                                    <div class="form-card">
+                                        <div class="mb-30">
+                                            <label for="txtFullname">Full name:</label>
+                                            <input type="text" class="form-control" id="txtFullname" name="txtFullname" placeholder="Please enter your full name" required>
+                                        </div>
+                                        <div class="mb-30">
+                                            <label for="txtEmail">Email Id:</label>
+                                            <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Please enter your email id" required>
+                                        </div>
+                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+                                    </div>
+                                    <input type="button" name="submit" class="action-button" value="Start" onClick="EnrollSurvey();" />
+                                </fieldset>
+                                <fieldset name="step2">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color">1) What type of traveler are you?</h6>
@@ -45,9 +69,10 @@ include 'include/header-links.php';
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                     </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step3">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
@@ -61,7 +86,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step4">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">5) What type of accommodation do you prefer?</h6>
@@ -75,7 +100,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="make_payment" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step5">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">7) What activities do you enjoy most while traveling? (Select all that apply)</h6>
@@ -89,7 +114,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset  name="step6">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">9) How important is sustainable/eco-friendly travel to you?</h6>
@@ -103,7 +128,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Finish" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset  name="step7">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
                                         <br><br>
@@ -131,6 +156,80 @@ include 'include/header-links.php';
     <?php
     include 'include/footer-scripts.php';
     ?>
+
+    <script type="text/javascript">
+        function getSidFromQueryString() {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('sid');
+        }
+
+        function EnrollSurvey() {
+            var fullName = document.getElementById("txtFullname").value;
+            var email = document.getElementById("txtEmail").value;
+            var sid = getSidFromQueryString();
+
+            // Perform validation
+            if (fullName.trim() === '') {
+                alert('Please enter your full name.');
+                return; // Stop execution if full name is blank
+            }
+
+            // Regular expression for email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email.trim() === '') {
+                alert('Please enter your email.');
+                return; // Stop execution if email is blank
+            } else if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return; // Stop execution if email format is invalid
+            }
+
+            // Data to be sent via AJAX
+            var data = {
+                fullName: fullName,
+                email: email,
+                sid: sid
+            };
+
+            // Send data to PHP script using AJAX
+            $.ajax({
+                url: 'enrollsurvey.php?sid=' + sid,
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    // Handle success response
+                    var responseData = JSON.parse(response);
+                    if (responseData.success) {
+                        // Access the inserted ID and store it in a hidden field
+                        var insertedId = responseData.inserted_id;
+                        $("#hdnMainEnrollId").val(insertedId);
+
+                        console.log("Inserted ID: " + insertedId);
+                        // Move to the next step
+                        showNextStep();
+                    } else {
+                        // Handle failure
+                        console.error(responseData.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    // Handle error
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+        function showNextStep(stepname) {
+            // Hide the current step
+            var currentStep = document.querySelector('fieldset[name="step1"]');
+            currentStep.style.display = 'none';
+
+            // Show the next step
+            var nextStep = document.querySelector('fieldset[name="step2"]');
+            nextStep.style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
