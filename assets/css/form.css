@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -43,9 +44,9 @@ html, body {
 }
 
 #msform fieldset .landing-img {
-    width: 70%!important;
-    margin-left: auto!important;
-    margin-right: auto!important;
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 
@@ -70,34 +71,22 @@ html, body {
     color: #323232;
 }
 
-#msform input[type="text"],
+#msform input[type="text"], input[type="email"]
 #msform textarea {
-    padding: 0px 8px 4px 8px;
     border: none;
-    border: 1px solid #ccc;
+    border: 1px solid #afa9a9;
     border-radius: 5px;
     margin-bottom: 25px;
     margin-top: 2px;
     width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2C3E50;
-    font-size: 16px;
-    letter-spacing: 1px;
 }
 
-#msform input[type="text"]:focus,
-#msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: none;
-    font-weight: bold;
-    border-bottom: 2px solid skyblue;
-    outline-width: 0;
+.form-control {
+    border: 1px solid #afa9a9; 
 }
 
-.checkbox label, .radio label {
+.checkbox label,
+.radio label {
     min-height: 20px;
     padding-left: 20px;
     margin-bottom: 0;
@@ -111,7 +100,8 @@ html, body {
     margin-left: -20px;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
     margin: 6px 0 0;
     line-height: normal;
 }
@@ -228,6 +218,7 @@ select.list-dt:focus {
 #progressbar #step0:before {
     content: "Start";
 }
+
 #progressbar #step1:before {
     content: "1"
 }
@@ -243,6 +234,7 @@ select.list-dt:focus {
 #progressbar #step4:before {
     content: "4"
 }
+
 #progressbar #step5:before {
     content: "5"
 }
@@ -282,9 +274,10 @@ select.list-dt:focus {
 }
 
 /*Color number of the step and the connector before it*/
-#progressbar li.active:before{
+#progressbar li.active:before {
     background: #F3842D;
 }
+
 #progressbar li.active:after {
     background: #151328;
 }
@@ -295,7 +288,8 @@ select.list-dt:focus {
     margin-bottom: 25px;
 }
 
-.radio, .checkbox {
+.radio,
+.checkbox {
     position: relative;
     display: block;
     margin-top: 10px;
@@ -311,7 +305,7 @@ select.list-dt:focus {
     display: inline-table;
 }
 
-input[type="radio"]:checked + .radio-label img {
+input[type="radio"]:checked+.radio-label img {
     border: 2px solid #007bff;
 }
 
@@ -323,7 +317,7 @@ input[type="radio"]:checked + .radio-label img {
     cursor: pointer;
 }
 
-.radio-button-img:hover{
+.radio-button-img:hover {
     box-shadow: 1px 1px 8px #151328;
 }
 
@@ -332,20 +326,36 @@ input[type="radio"]:checked + .radio-label img {
     caption-side: bottom;
 }
 
+.tagline {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-in-out infinite alternate;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}
 
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 
-.line-1{
+.line-1 {
     position: relative;
-    top: 50%;  
+    top: 50%;
     width: 24em;
     margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
