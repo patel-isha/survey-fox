@@ -45,7 +45,7 @@ if (isset($_POST['txtUsername'])) {
     <link href="../siteimages/dash/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../siteimages/dash/assets/libs/css/style.css">
     <link rel="stylesheet" href="../siteimages/dash/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="icon" type="image/x-icon" href="../siteimages/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.png">
     <style>
     html,
     body {
