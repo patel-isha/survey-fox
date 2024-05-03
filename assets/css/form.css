@@ -112,6 +112,7 @@ input[type=radio] {
     background: #151328;
     font-weight: bold;
     color: white;
+    text-decoration: none !important;
     border: 0 none;
     border-radius: 5px;
     cursor: pointer;
