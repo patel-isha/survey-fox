@@ -44,23 +44,28 @@ include 'include/header-links.php';
                                         </div>
                                         <img src="assets/img/begin-survey.jpg" class="w-50">
                                     </div>
-                                    <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
-                                </fieldset>
-                                <fieldset name="step1">
-                                    <div class="form-card">
-                                        <div class="mb-30">
-                                            <label for="txtFullname">Full name:</label>
-                                            <input type="text" class="form-control" id="txtFullname" name="txtFullname" placeholder="Please enter your full name" required>
-                                        </div>
-                                        <div class="mb-30">
-                                            <label for="txtEmail">Email Id:</label>
-                                            <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Please enter your email id" required>
-                                        </div>
-                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
-                                    </div>
-                                    <input type="button" class="action-button" value="Start" onClick="EnrollSurvey();" />
+
+                                    <input type="button" name="next" class="next action-button" value="Get Started" />
                                 </fieldset>
                                 <fieldset name="step2">
+                                    <div class="form-card">
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Full name</h6>
+                                            <input type="text" class="form-control" name="txtFullname" id="txtFullname" required>
+                                        </div>
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Email</h6>
+                                            <input type="text" class="form-control" name="txtEmail" id="txtEmail" required>
+                                        </div>
+                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+
+
+                                    </div>
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" /> -->
+                                    <input type="button" class="action-button" value="Enroll" onClick="EnrollSurvey();" />
+                                </fieldset>
+                                <fieldset name="step3">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -101,7 +106,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step3">
+                                <fieldset name="step4">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -148,7 +153,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step4">
+                                <fieldset name="step5">
                                     <div class="form-card">
                                         <!-- image radio button -->
                                         <div class="mb-30">
@@ -207,7 +212,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="make_payment" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step5">
+                                <fieldset name="step6">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -255,7 +260,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step6">
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <!-- radio button -->
                                         <div class="mb-30">
@@ -293,7 +298,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Finish" />
                                 </fieldset>
-                                <fieldset name="step7">
+                                <fieldset name="step8">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
                                         <br><br>
