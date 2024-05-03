@@ -96,8 +96,8 @@ include 'include/header-links.php';
                                                 </div>
                                                 <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
                                             </div>
-                                            <input type="button" class="action-button next" value="Start" />
-                                            <!-- onClick="EnrollSurvey();" -->
+                                            <input type="button" class="action-button next" value="Start" onClick="EnrollSurvey();" />
+                                            <!--  -->
                                         </fieldset>
                                         <fieldset name="step2">
                                             <div class="form-card">
