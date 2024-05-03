@@ -252,7 +252,7 @@ select.list-dt:focus {
 }
 
 #progressbar #step7:before {
-    content: "7"
+    content: "End"
 }
 
 /*ProgressBar before any progress*/

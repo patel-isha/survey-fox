@@ -25,17 +25,18 @@ include 'include/header-links.php';
                             <form id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
-                                    <li class="active" id="step0"></li>
+                                <li class="active" id="step0"></li>
                                     <li id="step1"></li>
                                     <li id="step2"></li>
                                     <li id="step3"></li>
                                     <li id="step4"></li>
                                     <li id="step5"></li>
                                     <li id="step6"></li>
+                                    <li id="step7"></li>
                                 </ul>
                                 <h2 class="title-color"><strong>Food & Hospitality <span class="orange">Survey</span></strong></h2>
                                 <!-- fieldsets -->
-                                <fieldset>
+                                <fieldset name="step1">
                                 <div class="typewriter">
                                     <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
                                         <span class="wrap"></span>
@@ -50,7 +51,25 @@ include 'include/header-links.php';
 
                                         <input type="button" name="next" class="next action-button" value="Get Started" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step2">
+                                    <div class="form-card">
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Full name</h6>
+                                            <input type="text" class="form-control" name="txtFullname" id="txtFullname" required>
+                                        </div>
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Email</h6>
+                                            <input type="text" class="form-control" name="txtEmail" id="txtEmail" required>
+                                        </div>
+                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+
+
+                                    </div>
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" /> -->
+                                    <input type="button" class="action-button" value="Enroll" onClick="EnrollSurvey();" />
+                                </fieldset>
+                                <fieldset name="step3">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color">1) How frequently do you dine at restaurants or consume food outside of your home?</h6>
@@ -88,7 +107,7 @@ include 'include/header-links.php';
                                     </div>
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step4">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">3) How do you prefer to book your accommodations or dining reservations?</h6>
@@ -121,7 +140,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step5">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">5) How do you rate your overall dining experience of your most recent visit to a restaurant?</h6>
@@ -157,7 +176,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step6">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">7) How do you prefer to provide feedback to restaurants?</h6>
@@ -193,7 +212,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">9) What amenities or services do you value the most when staying over?</h6>
@@ -236,7 +255,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="make_payment" class="next action-button" value="Finish" />
                                 </fieldset>
-                                <fieldset>
+                                <fieldset name="step8">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
                                         <br><br>
