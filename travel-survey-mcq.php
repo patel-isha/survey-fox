@@ -38,27 +38,34 @@ include 'include/header-links.php';
                                 <!-- fieldsets -->
                                 <fieldset>
                                     <div class="form-card text-center pb-0">
-                                        <h2 class="tagline text-center mb-2">Explore Your Travel Preferences: </h2>
-                                        <h2 class="tagline orange text-center"> Start Your Journey Now!</h2>
+                                        <div class="typewriter">
+                                            <h2 class="tagline mb-2 line1">Explore Your Travel Preferences:</h2>
+                                            <h2 class="tagline orange line2 mb-2 hidden">Start Your Journey Now!</h2>
+                                        </div>
                                         <img src="assets/img/begin-survey.jpg" class="w-50">
                                     </div>
-                                    <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
-                                </fieldset>
-                                <fieldset name="step1">
-                                    <div class="form-card">
-                                        <div class="mb-30">
-                                            <label for="txtFullname">Full name:</label>
-                                            <input type="text" class="form-control" id="txtFullname" name="txtFullname" placeholder="Please enter your full name" required>
-                                        </div>
-                                        <div class="mb-30">
-                                            <label for="txtEmail">Email Id:</label>
-                                            <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Please enter your email id" required>
-                                        </div>
-                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
-                                    </div>
-                                    <input type="button" class="action-button" value="Start" onClick="EnrollSurvey();" />
+
+                                    <input type="button" name="next" class="next action-button" value="Get Started" />
                                 </fieldset>
                                 <fieldset name="step2">
+                                    <div class="form-card">
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Full name</h6>
+                                            <input type="text" class="form-control" name="txtFullname" id="txtFullname" required>
+                                        </div>
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">Email</h6>
+                                            <input type="text" class="form-control" name="txtEmail" id="txtEmail" required>
+                                        </div>
+                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+
+
+                                    </div>
+                                    <!-- <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" /> -->
+                                    <input type="button" class="action-button" value="Enroll" onClick="EnrollSurvey();" />
+                                </fieldset>
+                                <fieldset name="step3">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -99,7 +106,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step3">
+                                <fieldset name="step4">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -146,7 +153,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step4">
+                                <fieldset name="step5">
                                     <div class="form-card">
                                         <!-- image radio button -->
                                         <div class="mb-30">
@@ -205,7 +212,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="make_payment" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step5">
+                                <fieldset name="step6">
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
@@ -253,7 +260,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                                <fieldset name="step6">
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <!-- radio button -->
                                         <div class="mb-30">
@@ -291,7 +298,7 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Finish" />
                                 </fieldset>
-                                <fieldset name="step7">
+                                <fieldset name="step8">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
                                         <br><br>
@@ -390,7 +397,53 @@ include 'include/header-links.php';
             // Show the next step
             var nextStep = document.querySelector('fieldset[name="step2"]');
             nextStep.style.display = 'block';
+
+            // Add 'active' class to the corresponding progress bar item
+            var currentProgressBarItem = document.querySelector('#step1');
+            var nextProgressBarItem = document.querySelector('#step2');
+
+            // Add 'active' class to next progress bar item
+            nextProgressBarItem.classList.add('active');
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var line1 = document.querySelector('.line1');
+            var line2 = document.querySelector('.line2');
+            var text1 = line1.textContent.trim();
+            var text2 = line2.textContent.trim();
+
+            function typeLine1() {
+                line1.textContent = '';
+                var index = 0;
+                var typingInterval = setInterval(function() {
+                    line1.textContent += text1[index++];
+                    if (index === text1.length) {
+                        clearInterval(typingInterval);
+                        line2.classList.remove('hidden');
+                        typeLine2();
+                    }
+                }, 100);
+            }
+
+            function typeLine2() {
+                line2.textContent = '';
+                var index = 0;
+                var typingInterval = setInterval(function() {
+                    line2.textContent += text2[index++];
+                    if (index === text2.length) {
+                        clearInterval(typingInterval);
+                        setTimeout(function() {
+                            line1.textContent = '';
+                            line2.textContent = '';
+                            line2.classList.add('hidden');
+                            typeLine1();
+                        }, 1000); // Delay before restarting typing
+                    }
+                }, 100);
+            }
+
+            typeLine1();
+        });
     </script>
 </body>
 

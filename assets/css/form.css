@@ -245,7 +245,7 @@ select.list-dt:focus {
 }
 
 #progressbar #step7:before {
-    content: "7"
+    content: "End"
 }
 
 /*ProgressBar before any progress*/
@@ -330,22 +330,34 @@ input[type="radio"]:checked+.radio-label img {
 .tagline {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: slideIn 1s ease-in-out infinite alternate;
 }
 
-/* Animation keyframes */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(5px);
-    }
+.typewriter h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
 }
 
-/* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+.line1::after,
+.line2::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite alternate;
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.hidden {
+    visibility: hidden;
+}
 
 table 
 { 
