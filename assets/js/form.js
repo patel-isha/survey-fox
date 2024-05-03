@@ -133,71 +133,119 @@ $(document).ready(function () {
     }
 
     function EnrollSurvey() {
-        var fullName = document.getElementById("txtFullname").value;
-        var email = document.getElementById("txtEmail").value;
-        var sid = getSidFromQueryString();
+      var fullName = document.getElementById('txtFullname').value
+      var email = document.getElementById('txtEmail').value
+      var sid = getSidFromQueryString()
 
-        // Perform validation
-        if (fullName.trim() === '') {
-            alert('Please enter your full name.');
-            return; // Stop execution if full name is blank
-        }
+      // Perform validation
+      if (fullName.trim() === '') {
+        alert('Please enter your full name.')
+        return // Stop execution if full name is blank
+      }
 
-        // Regular expression for email validation
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Regular expression for email validation
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-        if (email.trim() === '') {
-            alert('Please enter your email.');
-            return; // Stop execution if email is blank
-        } else if (!emailPattern.test(email)) {
-            alert('Please enter a valid email address.');
-            return; // Stop execution if email format is invalid
-        }
+      if (email.trim() === '') {
+        alert('Please enter your email.')
+        return // Stop execution if email is blank
+      } else if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.')
+        return // Stop execution if email format is invalid
+      }
 
+      // Data to be sent via AJAX
+      var data = {
+        fullName: fullName, // as table supports integer change the name and email to static integer values for testing
+        email: email,
+        sid: sid,
+      }
 
-        // Data to be sent via AJAX
-        var data = {
-            fullName: fullName,
-            email: email,
-            sid: sid
-        };
-
-        // Send data to PHP script using AJAX
-        $.ajax({
-            url: 'enrollsurvey.php?sid=' + sid,
-            type: 'POST',
-            data: data,
-            success: function (response) {
-                // Handle success response
-                var responseData = JSON.parse(response);
-                if (responseData.success) {
-                    // Access the inserted ID and store it in a hidden field
-                    var insertedId = responseData.inserted_id;
-                    $("#hdnMainEnrollId").val(insertedId);
-
-                    console.log("Inserted ID: " + insertedId);
-                    // Move to the next step
-                    showNextStep();
-                } else {
-                    // Handle failure
-                    console.error(responseData.message);
-                }
-            },
-            error: function (xhr, status, error) {
-                // Handle error
-                console.error(xhr.responseText);
+      // Send data to PHP script using AJAX
+      $.ajax({
+        url: 'enrollsurvey.php?sid=' + sid,
+        type: 'POST',
+        data: data,
+        success: function(response) {
+            var responseData = JSON.parse(response);
+            if (responseData.success) {
+                var insertedId = responseData.inserted_id;
+                $("#hdnMainEnrollId").val(insertedId);  // Storing ID in hidden input (if needed elsewhere)
+    
+                // Now update the anchor's href attribute
+                $('#viewInvoiceLink').attr('href', 'invoice.php?srid=' + insertedId);
+    
+                console.log("Inserted ID: " + insertedId);
+                // Optional: Move to the next step
+                showNextStep();
+            } else {
+                // Handle failure
+                console.error(responseData.message);
             }
-        });
-
+        },
+        error: function(xhr, status, error) {
+            // Handle error
+            console.error(xhr.responseText);
+        }
+    });
     }
 
     function showNextStep(stepname) {
-        // Hide the current step
-        var currentStep = document.querySelector('fieldset[name="step2"]');
-        currentStep.style.display = 'none';
+      // Hide the current step
+      var currentStep = document.querySelector('fieldset[name="step1"]')
+      currentStep.style.display = 'none'
 
-        // Show the next step
-        var nextStep = document.querySelector('fieldset[name="step3"]');
-        nextStep.style.display = 'block';
+      // Show the next step
+      var nextStep = document.querySelector('fieldset[name="step2"]')
+      nextStep.style.display = 'block'
+
+      // Add 'active' class to the corresponding progress bar item
+      var currentProgressBarItem = document.querySelector('#step1')
+      var nextProgressBarItem = document.querySelector('#step2')
+
+      // Add 'active' class to next progress bar item
+      nextProgressBarItem.classList.add('active')
     }
 
+    document.addEventListener('DOMContentLoaded', function () {
+      var line1 = document.querySelector('.line1')
+      var line2 = document.querySelector('.line2')
+      var text1 = line1.textContent.trim()
+      var text2 = line2.textContent.trim()
+
+      function typeLine1() {
+        line1.textContent = ''
+        var index = 0
+        var typingInterval = setInterval(function () {
+          line1.textContent += text1[index++]
+          if (index === text1.length) {
+            clearInterval(typingInterval)
+            line2.classList.remove('hidden')
+            typeLine2()
+          }
+        }, 100)
+      }
+
+      function typeLine2() {
+        line2.textContent = ''
+        var index = 0
+        var typingInterval = setInterval(function () {
+          line2.textContent += text2[index++]
+          if (index === text2.length) {
+            clearInterval(typingInterval)
+            setTimeout(function () {
+              line1.textContent = ''
+              line2.textContent = ''
+              line2.classList.add('hidden')
+              typeLine1()
+            }, 1000) // Delay before restarting typing
+          }
+        }, 100)
+      }
+
+      typeLine1()
+    })
+
+    
+
+    

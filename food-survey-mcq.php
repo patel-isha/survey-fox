@@ -3,6 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include 'config/connection.php';
 
+
+
 ?>
 
 <html>
@@ -39,7 +41,7 @@ include 'include/header-links.php';
                                 <fieldset name="step0">
                                     <div class="form-card text-center pb-0">
                                         <div class="typewriter">
-                                            <h2 class="tagline mb-2 line1">Explore Your Travel Preferences:</h2>
+                                            <h2 class="tagline mb-2 line1">Savor the Survey</h2>
                                             <h2 class="tagline orange line2 mb-2 hidden">Start Your Journey Now!</h2>
                                         </div>
                                         <img src="assets/img/begin-survey.jpg" class="w-50">
@@ -263,7 +265,10 @@ include 'include/header-links.php';
                                         <div class="row justify-content-center mt-3">
         <div class="col-6 text-center">
         
-            <a href="invoice.php" class="next action-button">Open To see your Winnings</a>
+        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
+
+
+
         
                                         </div>
                                         </div>
@@ -286,125 +291,6 @@ include 'include/header-links.php';
     <?php
     include 'include/footer-scripts.php';
     ?>
-     <script type="text/javascript">
-        function getSidFromQueryString() {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('sid');
-        }
-
-        function EnrollSurvey() {
-            var fullName = document.getElementById("txtFullname").value;
-            var email = document.getElementById("txtEmail").value;
-            var sid = getSidFromQueryString();
-
-            // Perform validation
-            if (fullName.trim() === '') {
-                alert('Please enter your full name.');
-                return; // Stop execution if full name is blank
-            }
-
-            // Regular expression for email validation
-            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (email.trim() === '') {
-                alert('Please enter your email.');
-                return; // Stop execution if email is blank
-            } else if (!emailPattern.test(email)) {
-                alert('Please enter a valid email address.');
-                return; // Stop execution if email format is invalid
-            }
-
-            // Data to be sent via AJAX
-            var data = {
-                fullName: 0,
-                email: 2,
-                sid: sid
-            };
-
-            // Send data to PHP script using AJAX
-            $.ajax({
-                url: 'enrollsurvey.php?sid=' + sid,
-                type: 'POST',
-                data: data,
-                success: function(response) {
-                    // Handle success response
-                    var responseData = JSON.parse(response);
-                    if (responseData.success) {
-                        // Access the inserted ID and store it in a hidden field
-                        var insertedId = responseData.inserted_id;
-                        $("#hdnMainEnrollId").val(insertedId);
-
-                        console.log("Inserted ID: " + insertedId);
-                        // Move to the next step
-                        showNextStep();
-                    } else {
-                        // Handle failure
-                        console.error(responseData.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    // Handle error
-                    console.error(xhr.responseText);
-                }
-            });
-        }
-
-        function showNextStep(stepname) {
-            // Hide the current step
-            var currentStep = document.querySelector('fieldset[name="step1"]');
-            currentStep.style.display = 'none';
-
-            // Show the next step
-            var nextStep = document.querySelector('fieldset[name="step2"]');
-            nextStep.style.display = 'block';
-
-            // Add 'active' class to the corresponding progress bar item
-            var currentProgressBarItem = document.querySelector('#step1');
-            var nextProgressBarItem = document.querySelector('#step2');
-
-            // Add 'active' class to next progress bar item
-            nextProgressBarItem.classList.add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var line1 = document.querySelector('.line1');
-            var line2 = document.querySelector('.line2');
-            var text1 = line1.textContent.trim();
-            var text2 = line2.textContent.trim();
-
-            function typeLine1() {
-                line1.textContent = '';
-                var index = 0;
-                var typingInterval = setInterval(function() {
-                    line1.textContent += text1[index++];
-                    if (index === text1.length) {
-                        clearInterval(typingInterval);
-                        line2.classList.remove('hidden');
-                        typeLine2();
-                    }
-                }, 100);
-            }
-
-            function typeLine2() {
-                line2.textContent = '';
-                var index = 0;
-                var typingInterval = setInterval(function() {
-                    line2.textContent += text2[index++];
-                    if (index === text2.length) {
-                        clearInterval(typingInterval);
-                        setTimeout(function() {
-                            line1.textContent = '';
-                            line2.textContent = '';
-                            line2.classList.add('hidden');
-                            typeLine1();
-                        }, 1000); // Delay before restarting typing
-                    }
-                }, 100);
-            }
-
-            typeLine1();
-        });
-    </script>
 </body>
 
 

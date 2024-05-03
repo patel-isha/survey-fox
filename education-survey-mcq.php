@@ -30,7 +30,7 @@ include 'include/header-links.php';
 
                     if ($result->num_rows > 0) {
                         $sur_row = $result->fetch_assoc();
-                        ?>
+                ?>
                         <div class="card px-0 pb-0 mt-3 mb-3">
                             <div class="bg-theme pt-2 pb-2 br8">
                                 <?php
@@ -58,41 +58,34 @@ include 'include/header-links.php';
                                             <li id="step7"></li>
                                         </ul>
 
-                                        <h2 class="title-color"><strong><?php echo $sur_row['Name']; ?> <span
-                                                    class="orange">Survey</span></strong></h2>
+                                        <h2 class="title-color"><strong><?php echo $sur_row['Name']; ?> <span class="orange">Survey</span></strong></h2>
                                         <!-- fieldsets -->
-                                        <fieldset>
+                                        <fieldset name="step0">
                                             <div class="typewriter">
-                                                <div class="typewrite display-4"
-                                                    style="font-size: 2.5rem!important; height: 20%!important"
-                                                    data-period="2000"
-                                                    data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
+                                                <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
                                                     <span class="wrap"></span>
 
                                                 </div>
                                             </div>
                                             <div class="form-card pb-0">
                                                 <p>
-                                                <?php echo $sur_row['Description']; ?>
-                                                <img src="assets/img/logo/landing.png"alt="Description of the image" style="width: 100%; height: auto;">
-                            </p>
+                                                    <?php echo $sur_row['Description']; ?>
+                                                    <img src="assets/img/logo/landing.png" alt="Description of the image" style="width: 100%; height: auto;">
+                                                </p>
 
                                             </div>
-                                            <input type="button" name="next" class="next action-button w-25"
-                                                value="Begin Survey" />
+                                            <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
                                         </fieldset>
 
                                         <fieldset name="step1">
                                             <div class="form-card">
                                                 <div class="mb-30">
                                                     <label for="txtFullname">Full name:</label>
-                                                    <input type="text" class="form-control" id="txtFullname" name="txtFullname"
-                                                        placeholder="Please enter your full name" required>
+                                                    <input type="text" class="form-control" id="txtFullname" name="txtFullname" placeholder="Please enter your full name" required>
                                                 </div>
                                                 <div class="mb-30">
                                                     <label for="txtEmail">Email Id:</label>
-                                                    <input type="email" class="form-control" id="txtEmail" name="txtEmail"
-                                                        placeholder="Please enter your email id" required>
+                                                    <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Please enter your email id" required>
                                                 </div>
                                                 <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
                                             </div>
@@ -105,8 +98,7 @@ include 'include/header-links.php';
                                                 <div class="mb-30">
                                                     <h6 class="title-color">1) What is your age group?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optAge" checked value="Under 18"
-                                                                qid="24">Under 18</label>
+                                                        <label><input type="radio" name="optAge" checked value="Under 18" qid="24">Under 18</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optAge" value="18 to 24" qid="24">18 to
@@ -130,31 +122,24 @@ include 'include/header-links.php';
                                                 <div class="mb-30">
                                                     <h6 class="title-color">2) What is your highest level of education?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" checked value="High School"
-                                                                qid="25">High School</label>
+                                                        <label><input type="radio" name="optHighEdu" checked value="High School" qid="25">High School</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" value="Bachelor Degree"
-                                                                qid="25">Bachelor Degree</label>
+                                                        <label><input type="radio" name="optHighEdu" value="Bachelor Degree" qid="25">Bachelor Degree</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" value="Master Degree"
-                                                                qid="25">Master Degree</label>
+                                                        <label><input type="radio" name="optHighEdu" value="Master Degree" qid="25">Master Degree</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" value="PHD"
-                                                                qid="25">PHD</label>
+                                                        <label><input type="radio" name="optHighEdu" value="PHD" qid="25">PHD</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" value="Other"
-                                                                qid="25">Other</label>
-                                                        <input type="text" class="form-control mt-2 ml-20" qid="25"
-                                                            name="qid25other">
+                                                        <label><input type="radio" name="optHighEdu" value="Other" qid="25">Other</label>
+                                                        <input type="text" class="form-control mt-2 ml-20" qid="25" name="qid25other">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                             <input type="button" name="next" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step3">
@@ -163,16 +148,13 @@ include 'include/header-links.php';
                                                 <div class="mb-30">
                                                     <h6 class="title-color mb-3">3) What is your primary field of interest?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPrimaryInterest" checked
-                                                                value="Education" qid="26">Education</label>
+                                                        <label><input type="radio" name="optPrimaryInterest" checked value="Education" qid="26">Education</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPrimaryInterest" value="Cultural"
-                                                                qid="26">Cultural</label>
+                                                        <label><input type="radio" name="optPrimaryInterest" value="Cultural" qid="26">Cultural</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPrimaryInterest" value="Both"
-                                                                qid="26">Both</label>
+                                                        <label><input type="radio" name="optPrimaryInterest" value="Both" qid="26">Both</label>
                                                     </div>
                                                 </div>
                                                 <!-- radio button -->
@@ -180,12 +162,10 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">4) Have you attended any programs or courses
                                                         offered by our institute?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPastProg" checked value="Yes"
-                                                                qid="27">Yes</label>
+                                                        <label><input type="radio" name="optPastProg" checked value="Yes" qid="27">Yes</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPastProg" value="No"
-                                                                qid="27">No</label>
+                                                        <label><input type="radio" name="optPastProg" value="No" qid="27">No</label>
                                                     </div>
                                                 </div>
                                                 <!-- radio button -->
@@ -193,25 +173,20 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">5) If yes, please rate the overall quality of
                                                         the programs/courses.</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optQArating" checked value="Excellent"
-                                                                qid="28">Excellent</label>
+                                                        <label><input type="radio" name="optQArating" checked value="Excellent" qid="28">Excellent</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optQArating" value="Good"
-                                                                qid="28">Good</label>
+                                                        <label><input type="radio" name="optQArating" value="Good" qid="28">Good</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optQArating" value="Fair"
-                                                                qid="28">Fair</label>
+                                                        <label><input type="radio" name="optQArating" value="Fair" qid="28">Fair</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optQArating" value="Poor"
-                                                                qid="28">Poor</label>
+                                                        <label><input type="radio" name="optQArating" value="Poor" qid="28">Poor</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                             <input type="button" name="next" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step4">
@@ -221,26 +196,20 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">6) Which aspect of the programs/courses did you
                                                         find most valuable? (Select all that apply)</h6>
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="Content relevance" qid="29"
-                                                                name="chkProgs">Content relevance</label>
+                                                        <label><input type="checkbox" value="Content relevance" qid="29" name="chkProgs">Content relevance</label>
                                                     </div>
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="Teaching methodology" qid="29"
-                                                                name="chkProgs">Teaching methodology</label>
+                                                        <label><input type="checkbox" value="Teaching methodology" qid="29" name="chkProgs">Teaching methodology</label>
                                                     </div>
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="Instructor expertise" qid="29"
-                                                                name="chkProgs">Instructor expertise</label>
+                                                        <label><input type="checkbox" value="Instructor expertise" qid="29" name="chkProgs">Instructor expertise</label>
                                                     </div>
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="Networking opportunities" qid="29"
-                                                                name="chkProgs">Networking opportunities</label>
+                                                        <label><input type="checkbox" value="Networking opportunities" qid="29" name="chkProgs">Networking opportunities</label>
                                                     </div>
                                                     <div class="checkbox">
-                                                        <label><input type="checkbox" value="Any other education courses"
-                                                                qid="29" name="chkProgs">Any other education courses</label>
-                                                        <input type="text" class="form-control mt-2 ml-20" qid="29"
-                                                            name="qid29other">
+                                                        <label><input type="checkbox" value="Any other education courses" qid="29" name="chkProgs">Any other education courses</label>
+                                                        <input type="text" class="form-control mt-2 ml-20" qid="29" name="qid29other">
                                                     </div>
                                                 </div>
                                                 <!-- radio button -->
@@ -249,52 +218,41 @@ include 'include/header-links.php';
                                                         provided by our institute? (e.g., libraries, labs, cultural centers)
                                                     </h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRatings" checked value="Excellent"
-                                                                qid="30">Excellent</label>
+                                                        <label><input type="radio" name="optRatings" checked value="Excellent" qid="30">Excellent</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRatings" value="Good"
-                                                                qid="30">Good</label>
+                                                        <label><input type="radio" name="optRatings" value="Good" qid="30">Good</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRatings" value="Fair"
-                                                                qid="30">Fair</label>
+                                                        <label><input type="radio" name="optRatings" value="Fair" qid="30">Fair</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRatings" value="Poor"
-                                                                qid="30">Poor</label>
+                                                        <label><input type="radio" name="optRatings" value="Poor" qid="30">Poor</label>
                                                     </div>
                                                 </div>
                                                 <div class="mb-30">
                                                     <h6 class="title-color">8) How do you typically stay informed about
                                                         institute events and updates?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked
-                                                                value="Email newsletters" qid="31">Email newsletters</label>
+                                                        <label><input type="radio" name="optInfo" checked value="Email newsletters" qid="31">Email newsletters</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Social media"
-                                                                qid="31">Social media</label>
+                                                        <label><input type="radio" name="optInfo" checked value="Social media" qid="31">Social media</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Website"
-                                                                qid="31">Website</label>
+                                                        <label><input type="radio" name="optInfo" checked value="Website" qid="31">Website</label>
                                                     </div>
 
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Posters/flyers"
-                                                                qid="31">Posters/flyers</label>
+                                                        <label><input type="radio" name="optInfo" checked value="Posters/flyers" qid="31">Posters/flyers</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Other"
-                                                                qid="31">Other (please specify)</label>
-                                                        <input type="text" class="form-control mt-2 ml-20" qid="31"
-                                                            name="qid31other">
+                                                        <label><input type="radio" name="optInfo" checked value="Other" qid="31">Other (please specify)</label>
+                                                        <input type="text" class="form-control mt-2 ml-20" qid="31" name="qid31other">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                             <input type="button" name="make_payment" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step5">
@@ -304,20 +262,16 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">9) How satisfied are you with the frequency and
                                                         clarity of communication from our institute?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" checked
-                                                                value="Very satisfied" qid="32">Very satisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" checked value="Very satisfied" qid="32">Very satisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Satisfied"
-                                                                qid="32">Satisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" value="Satisfied" qid="32">Satisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Dissatisfied"
-                                                                qid="32">Dissatisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" value="Dissatisfied" qid="32">Dissatisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction"
-                                                                value="Very dissatisfied" qid="32">Very dissatisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" value="Very dissatisfied" qid="32">Very dissatisfied</label>
                                                     </div>
                                                 </div>
                                                 <!-- radio button -->
@@ -325,17 +279,14 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">10) Do you feel our institute promotes
                                                         diversity and inclusion effectively?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" checked value="Yes"
-                                                                qid="33">Yes</label>
+                                                        <label><input type="radio" name="optFeelProm" checked value="Yes" qid="33">Yes</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" value="No"
-                                                                qid="33">No</label>
+                                                        <label><input type="radio" name="optFeelProm" value="No" qid="33">No</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                             <input type="button" name="next" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step6">
@@ -345,24 +296,19 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">11) How likely are you to recommend our
                                                         institute or website to others?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" checked
-                                                                value="Very likely" qid="34">Very likely</label>
+                                                        <label><input type="radio" name="optRecommend" checked value="Very likely" qid="34">Very likely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Likely"
-                                                                qid="34">Likely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Likely" qid="34">Likely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Neutral"
-                                                                qid="34">Neutral</label>
+                                                        <label><input type="radio" name="optRecommend" value="Neutral" qid="34">Neutral</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Unlikely"
-                                                                qid="34">Unlikely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Unlikely" qid="34">Unlikely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Very unlikely"
-                                                                qid="34">Very unlikely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Very unlikely" qid="34">Very unlikely</label>
                                                     </div>
                                                 </div>
                                                 <!-- questions dynamic -->
@@ -386,7 +332,7 @@ include 'include/header-links.php';
 
                                                     $Index = 12;
                                                     while ($row = $result->fetch_assoc()) {
-                                                        ?>
+                                                ?>
 
                                                         <div class="mb-30">
                                                             <h6 class="title-color mb-3"><?php echo $Index ?>)
@@ -421,7 +367,6 @@ include 'include/header-links.php';
                                                                     qid='$Qid' name='chkDyno$Qid'>$value</label>
                                                             </div>";
                                                                 }
-
                                                             } else {
                                                                 echo "<input type='text' class='form-control mt-2 ml-20' qid='$Qid'
                                                         name='txt$Qid'>";
@@ -433,9 +378,8 @@ include 'include/header-links.php';
                                                         </div>
 
 
-                                                        <?php
+                                                <?php
                                                         $Index = $Index + 1;
-
                                                     }
 
                                                     echo "";
@@ -446,13 +390,11 @@ include 'include/header-links.php';
 
                                                 <div class="mb-30">
                                                     <h6 class="title-color mb-3">Give us feedback or suggestion (if any)</h6>
-                                                    <textarea class="form-control" rows="3" id="txtSuggestion"
-                                                        name="txtSuggestion"></textarea>
+                                                    <textarea class="form-control" rows="3" id="txtSuggestion" name="txtSuggestion"></textarea>
 
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                             <input type="button" name="next" class="next action-button" value="Finish" />
                                         </fieldset>
                                         <fieldset name="step7">
@@ -461,8 +403,7 @@ include 'include/header-links.php';
                                                 <br><br>
                                                 <div class="row justify-content-center">
                                                     <div class="col-3">
-                                                        <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
-                                                            class="fit-image">
+                                                        <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                                     </div>
                                                 </div>
                                                 <br><br>
@@ -478,7 +419,7 @@ include 'include/header-links.php';
                             </div>
                         </div>
                         <!-- Main survey end statement -->
-                        <?php
+                <?php
                     } else {
                         echo "Survey not found.";
                     }
@@ -533,7 +474,7 @@ include 'include/header-links.php';
                 url: 'enrollsurvey.php?sid=' + sid,
                 type: 'POST',
                 data: data,
-                success: function (response) {
+                success: function(response) {
                     // Handle success response
                     var responseData = JSON.parse(response);
                     if (responseData.success) {
@@ -549,7 +490,7 @@ include 'include/header-links.php';
                         console.error(responseData.message);
                     }
                 },
-                error: function (xhr, status, error) {
+                error: function(xhr, status, error) {
                     // Handle error
                     console.error(xhr.responseText);
                 }
