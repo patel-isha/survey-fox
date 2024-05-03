@@ -25,7 +25,7 @@ include 'include/header-links.php';
                             <form id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
-                                <li class="active" id="step0"></li>
+                                    <li class="active" id="step0"></li>
                                     <li id="step1"></li>
                                     <li id="step2"></li>
                                     <li id="step3"></li>
@@ -37,19 +37,19 @@ include 'include/header-links.php';
                                 <h2 class="title-color"><strong>Food & Hospitality <span class="orange">Survey</span></strong></h2>
                                 <!-- fieldsets -->
                                 <fieldset name="step1">
-                                <div class="typewriter">
-                                    <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
-                                        <span class="wrap"></span>
-
-                                    </div>
-                                </div>
-                                    <div class="form-card landing-img">
-
-                                            <img src="assets/img/logo/landing.png"alt="Description of the image" style="width: 100%; height: auto;">
+                                    <div class="typewriter">
+                                        <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
+                                            <span class="wrap"></span>
 
                                         </div>
+                                    </div>
+                                    <div class="form-card landing-img">
 
-                                        <input type="button" name="next" class="next action-button" value="Get Started" />
+                                        <img src="assets/img/logo/landing.png" alt="Description of the image" style="width: 100%; height: auto;">
+
+                                    </div>
+
+                                    <input type="button" name="next" class="next action-button" value="Get Started" />
                                 </fieldset>
                                 <fieldset name="step2">
                                     <div class="form-card">
@@ -158,7 +158,7 @@ include 'include/header-links.php';
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">6)	What are your expectations when dining out?</h6>
+                                            <h6 class="title-color mb-3">6) What are your expectations when dining out?</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Cost-effectiveness</label>
                                             </div>
@@ -265,14 +265,14 @@ include 'include/header-links.php';
                                             </div>
                                         </div>
                                         <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-            <a href="congrats-page.php?openModal=true" class="next action-button" data-toggle="modal" data-target="#myModal">Open To see your Winnings</a>
-            <!-- Inside the form -->
-<input type="hidden" id="openModalBtn">
+                                            <div class="col-6 text-center">
 
-        </div>
-    </div>
+                                                <a href="congrats-page.php?openModal=true" class="next action-button" data-toggle="modal" data-target="#myModal">Open To see your Winnings</a>
+                                                <!-- Inside the form -->
+                                                <input type="hidden" id="openModalBtn">
+
+                                            </div>
+                                        </div>
                                         <br><br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">

@@ -38,7 +38,7 @@ include 'include/header-links.php';
                                 <!-- fieldsets -->
                                 <fieldset name="step1">
                                     <div class="typewriter">
-                                        <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "lorem ipsum"]'>
+                                        <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
                                             <span class="wrap"></span>
 
                                         </div>
@@ -107,6 +107,7 @@ include 'include/header-links.php';
                                             </div>
                                         </div>
                                     </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
                                 <fieldset name="step4">
@@ -325,10 +326,83 @@ include 'include/header-links.php';
             </div>
         </div>
     </div>
-
     <?php
     include 'include/footer-scripts.php';
     ?>
+
+    <script type="text/javascript">
+        function getSidFromQueryString() {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('sid');
+        }
+
+        function EnrollSurvey() {
+            var fullName = document.getElementById("txtFullname").value;
+            var email = document.getElementById("txtEmail").value;
+            var sid = getSidFromQueryString();
+
+            // Perform validation
+            if (fullName.trim() === '') {
+                alert('Please enter your full name.');
+                return; // Stop execution if full name is blank
+            }
+
+            // Regular expression for email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email.trim() === '') {
+                alert('Please enter your email.');
+                return; // Stop execution if email is blank
+            } else if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return; // Stop execution if email format is invalid
+            }
+
+            // Data to be sent via AJAX
+            var data = {
+                fullName: fullName,
+                email: email,
+                sid: sid
+            };
+
+            // Send data to PHP script using AJAX
+            $.ajax({
+                url: 'enrollsurvey.php?sid=' + sid,
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    // Handle success response
+                    var responseData = JSON.parse(response);
+                    if (responseData.success) {
+                        // Access the inserted ID and store it in a hidden field
+                        var insertedId = responseData.inserted_id;
+                        $("#hdnMainEnrollId").val(insertedId);
+
+                        console.log("Inserted ID: " + insertedId);
+                        // Move to the next step
+                        showNextStep();
+                    } else {
+                        // Handle failure
+                        console.error(responseData.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    // Handle error
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+        function showNextStep(stepname) {
+            // Hide the current step
+            var currentStep = document.querySelector('fieldset[name="step1"]');
+            currentStep.style.display = 'none';
+
+            // Show the next step
+            var nextStep = document.querySelector('fieldset[name="step2"]');
+            nextStep.style.display = 'block';
+        }
+    </script>
 </body>
 
 </html>
