@@ -259,14 +259,22 @@ $(document).ready(function () {
               quesIds.push($(this).val());
           });
   
-          // Collect values from text areas
-          currentFieldset.find("textarea.survey-answer").each(function() {
-              answers.push($(this).val());
-          });
+          // Check if the fieldset contains any textarea for answers
+          if (currentFieldset.find("textarea.survey-answer").length > 0) {
+              // Collect values from textareas
+              currentFieldset.find("textarea.survey-answer").each(function() {
+                  answers.push($(this).val());
+              });
+          } else {
+              // Collect values from checked radio buttons
+              currentFieldset.find("input[type='radio']:checked").each(function() {
+                  answers.push($(this).val());
+              });
+          }
   
-          console.log("SR ID:", srId); // Check SR ID
-          console.log("Question IDs:", quesIds); // Check Question IDs
-          console.log("Answers:", answers); // Check Answers
+          console.log("SR ID:", srId); // Debug: Check SR ID
+          console.log("Question IDs:", quesIds); // Debug: Check Question IDs
+          console.log("Answers:", answers); // Debug: Check Answers
   
           $.ajax({
               url: 'saveSurveyData.php',
