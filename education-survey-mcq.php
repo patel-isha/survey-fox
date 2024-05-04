@@ -38,7 +38,7 @@ include 'include/header-links.php';
 
                                     echo "<img src='siteimages/company/" . $sur_row['Logo'] . "' class='m-auto w-30' alt='" . $sur_row['CompanyName'] . "'>";
                                 } else {
-                                    echo "<h2 class='title-color text-white'><strong>" . $sur_row['CompanyName'] . "</strong></h2>";
+                                    echo "<h2 class='navy-blue text-white'><strong>" . $sur_row['CompanyName'] . "</strong></h2>";
                                 }
                                 ?>
 
@@ -58,10 +58,10 @@ include 'include/header-links.php';
                                             <li id="step7"></li>
                                         </ul>
 
-                                        <h2 class="title-color"><strong><?php echo $sur_row['Name']; ?> <span class="orange">Survey</span></strong></h2>
+                                        <h3 class="navy-blue"><strong><?php echo $sur_row['Name']; ?> <span class="light-blue">Survey</span></strong></h3>
                                         <!-- fieldsets -->
                                         <fieldset name="step0">
-                                            <div class="typewriter">
+                                            <div class="typewriter mb-3">
                                                 <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
                                                     <span class="wrap"></span>
 
@@ -96,7 +96,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">1) What is your age group?</h6>
+                                                    <h6 class="navy-blue">1) What is your age group?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optAge" checked value="Under 18" qid="24">Under 18</label>
                                                     </div>
@@ -120,7 +120,7 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">2) What is your highest level of education?</h6>
+                                                    <h6 class="navy-blue">2) What is your highest level of education?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optHighEdu" checked value="High School" qid="25">High School</label>
                                                     </div>
@@ -146,7 +146,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">3) What is your primary field of interest?</h6>
+                                                    <h6 class="navy-blue mb-3">3) What is your primary field of interest?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optPrimaryInterest" checked value="Education" qid="26">Education</label>
                                                     </div>
@@ -159,7 +159,7 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">4) Have you attended any programs or courses
+                                                    <h6 class="navy-blue mb-3">4) Have you attended any programs or courses
                                                         offered by our institute?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optPastProg" checked value="Yes" qid="27">Yes</label>
@@ -170,7 +170,7 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">5) If yes, please rate the overall quality of
+                                                    <h6 class="navy-blue mb-3">5) If yes, please rate the overall quality of
                                                         the programs/courses.</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optQArating" checked value="Excellent" qid="28">Excellent</label>
@@ -193,7 +193,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- image radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">6) Which aspect of the programs/courses did you
+                                                    <h6 class="navy-blue mb-3">6) Which aspect of the programs/courses did you
                                                         find most valuable? (Select all that apply)</h6>
                                                     <div class="checkbox">
                                                         <label><input type="checkbox" value="Content relevance" qid="29" name="chkProgs">Content relevance</label>
@@ -214,7 +214,7 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">7) How would you rate the facilities and resources
+                                                    <h6 class="navy-blue">7) How would you rate the facilities and resources
                                                         provided by our institute? (e.g., libraries, labs, cultural centers)
                                                     </h6>
                                                     <div class="radio">
@@ -231,7 +231,7 @@ include 'include/header-links.php';
                                                     </div>
                                                 </div>
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">8) How do you typically stay informed about
+                                                    <h6 class="navy-blue">8) How do you typically stay informed about
                                                         institute events and updates?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optInfo" checked value="Email newsletters" qid="31">Email newsletters</label>
@@ -259,7 +259,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">9) How satisfied are you with the frequency and
+                                                    <h6 class="navy-blue mb-3">9) How satisfied are you with the frequency and
                                                         clarity of communication from our institute?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optSatisfaction" checked value="Very satisfied" qid="32">Very satisfied</label>
@@ -276,7 +276,7 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">10) Do you feel our institute promotes
+                                                    <h6 class="navy-blue mb-3">10) Do you feel our institute promotes
                                                         diversity and inclusion effectively?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optFeelProm" checked value="Yes" qid="33">Yes</label>
@@ -293,7 +293,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">11) How likely are you to recommend our
+                                                    <h6 class="navy-blue mb-3">11) How likely are you to recommend our
                                                         institute or website to others?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optRecommend" checked value="Very likely" qid="34">Very likely</label>
@@ -335,7 +335,7 @@ include 'include/header-links.php';
                                                 ?>
 
                                                         <div class="mb-30">
-                                                            <h6 class="title-color mb-3"><?php echo $Index ?>)
+                                                            <h6 class="navy-blue mb-3"><?php echo $Index ?>)
                                                                 <?php echo $row['Question'] ?>
                                                             </h6>
 
@@ -389,7 +389,7 @@ include 'include/header-links.php';
                                                 ?>
 
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">Give us feedback or suggestion (if any)</h6>
+                                                    <h6 class="navy-blue mb-3">Give us feedback or suggestion (if any)</h6>
                                                     <textarea class="form-control" rows="3" id="txtSuggestion" name="txtSuggestion"></textarea>
 
                                                 </div>
