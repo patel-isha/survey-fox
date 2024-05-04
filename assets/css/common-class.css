@@ -1,15 +1,10 @@
 /* colors */
-.title-color {
-    color: #151328;
+.navy-blue {
+    color: #37345D;
 }
 
-.orange {
-    color: #F3842D;
-}
-
-/* background colors */
-.bg-theme {
-    background-color: #151328;
+.light-blue {
+    color: #7F8DFF;
 }
 
 /* margin */
@@ -28,6 +23,10 @@
 
 .w-30 {
     width: 30%;
+}
+
+.w-40 {
+    width: 40%;
 }
 
 .br8 {

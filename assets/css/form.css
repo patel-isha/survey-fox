@@ -20,26 +20,25 @@ body {
 
 /*Background color*/
 #grad1 {
-    background-color: #151328;
-    background-image: linear-gradient(120deg, #F3842D, #E8E3C6);
+    background-color: #7F8DFF;
 }
 
 /*form styles*/
 #msform {
     text-align: center;
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #msform fieldset .form-card {
     background: white;
     border: 0 none;
     border-radius: 0px;
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
-    padding: 20px 40px 30px 40px;
+    /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+    padding: 10px 40px 30px 40px;
     box-sizing: border-box;
     width: 94%;
-    margin: 0 3% 20px 3%;
+    margin: 0 3% 1% 3%;
     position: relative;
 }
 
@@ -57,7 +56,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     position: relative;
 }
 
@@ -71,8 +70,8 @@ body {
     color: #323232;
 }
 
-#msform input[type="text"], input[type="email"]
-#msform textarea {
+#msform input[type="text"],
+input[type="email"] #msform textarea {
     border: none;
     border: 1px solid #afa9a9;
     border-radius: 5px;
@@ -82,7 +81,7 @@ body {
 }
 
 .form-control {
-    border: 1px solid #afa9a9; 
+    border: 1px solid #afa9a9;
 }
 
 .checkbox label,
@@ -109,7 +108,7 @@ input[type=radio] {
 /*Blue Buttons*/
 #msform .action-button {
     width: 100px;
-    background: #151328;
+    background: #37345D;
     font-weight: bold;
     color: white;
     text-decoration: none !important;
@@ -122,13 +121,13 @@ input[type=radio] {
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #7F8DFF;
 }
 
 /*Previous Buttons*/
 #msform .action-button-previous {
     width: 100px;
-    background: #F3842D;
+    background: #7F8DFF;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -142,7 +141,7 @@ input[type=radio] {
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #37345D;
 }
 
 
@@ -197,7 +196,7 @@ select.list-dt:focus {
 
 /*progressbar*/
 #progressbar {
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     overflow: hidden;
     color: lightgrey;
     display: flex;
@@ -250,16 +249,17 @@ select.list-dt:focus {
 
 /*ProgressBar before any progress*/
 #progressbar li:before {
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
     display: block;
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     background: lightgray;
     border-radius: 50%;
     margin: 0 auto 10px auto;
     padding: 2px;
+    font-weight: bold;
 }
 
 /*ProgressBar connectors*/
@@ -276,11 +276,11 @@ select.list-dt:focus {
 
 /*Color number of the step and the connector before it*/
 #progressbar li.active:before {
-    background: #F3842D;
+    background: #7F8DFF;
 }
 
 #progressbar li.active:after {
-    background: #151328;
+    background: #37345D;
 }
 
 /*Imaged Radio Buttons*/
@@ -307,7 +307,7 @@ select.list-dt:focus {
 }
 
 input[type="radio"]:checked+.radio-label img {
-    border: 2px solid #007bff;
+    border: 2px solid #7F8DFF;
 }
 
 .radio-button-img {
@@ -319,7 +319,7 @@ input[type="radio"]:checked+.radio-label img {
 }
 
 .radio-button-img:hover {
-    box-shadow: 1px 1px 8px #151328;
+    box-shadow: 1px 1px 8px #37345D;
 }
 
 .caption-position {
@@ -329,10 +329,10 @@ input[type="radio"]:checked+.radio-label img {
 
 .tagline {
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
-.typewriter h2 {
+.typewriter h4 {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
@@ -346,31 +346,43 @@ input[type="radio"]:checked+.radio-label img {
 }
 
 @keyframes blink-caret {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 .hidden {
     visibility: hidden;
 }
 
-table 
-{ 
-    width: 100%; 
+table {
+    width: 100%;
     border-collapse: collapse;
 }
-th, td 
-{
-     border: 1px solid black; 
-     padding: 8px; 
-     text-align: left; 
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
-th 
-{
-     background-color: #f2f2f2; 
+
+th {
+    background-color: #f2f2f2;
 }

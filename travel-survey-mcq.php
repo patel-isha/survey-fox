@@ -15,10 +15,10 @@ include 'include/header-links.php';
     <!-- MultiStep Form -->
     <div class="container-fluid" id="grad1">
         <div class="row justify-content-center mt-0">
-            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-1 mb-1">
                 <div class="card px-0 pb-0 mt-3 mb-3">
-                    <div class="bg-theme pt-2 pb-2 br8">
-                        <img src="assets/img/logo/logo.png" class="m-auto w-30">
+                    <div class="bg-white pt-2 pb-2 br8">
+                        <img src="assets/img/logo/logo-blue.png" class="m-auto w-30">
                     </div>
                     <div class="row">
                         <div class="col-md-12 mx-0">
@@ -34,15 +34,15 @@ include 'include/header-links.php';
                                     <li id="step6"></li>
                                     <li id="step7"></li>
                                 </ul>
-                                <h2 class="title-color"><strong>Travel <span class="orange">Survey</span></strong></h2>
+                                <h3 class="navy-blue"><strong>Travel <span class="light-blue">Survey</span></strong></h3>
                                 <!-- fieldsets -->
                                 <fieldset name="step0">
                                     <div class="form-card text-center pb-0">
-                                        <div class="typewriter">
-                                            <h2 class="tagline mb-2 line1">Explore Your Travel Preferences:</h2>
-                                            <h2 class="tagline orange line2 mb-2 hidden">Start Your Journey Now!</h2>
+                                        <div class="typewriter mb-3">
+                                            <h4 class="tagline mb-2 line1">Explore Your Travel Preferences:</h4>
+                                            <h4 class="tagline light-blue line2 mb-2 hidden">Start Your Journey Now!</h4>
                                         </div>
-                                        <img src="assets/img/begin-survey.jpg" class="w-50">
+                                        <img src="assets/img/begin-survey.jpg" class="w-40">
                                     </div>
 
                                     <input type="button" name="next" class="next action-button" value="Get Started" />
@@ -50,11 +50,11 @@ include 'include/header-links.php';
                                 <fieldset name="step1">
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">Full name</h6>
+                                            <h6 class="navy-blue mb-3">Full name</h6>
                                             <input type="text" class="form-control" name="txtFullname" id="txtFullname" required>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">Email</h6>
+                                            <h6 class="navy-blue mb-3">Email</h6>
                                             <input type="text" class="form-control" name="txtEmail" id="txtEmail" required>
                                         </div>
                                         <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
@@ -69,7 +69,7 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
-                                            <h6 class="title-color">1) What type of traveler are you?</h6>
+                                            <h6 class="navy-blue">1) What type of traveler are you?</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Adventure seeker</label>
                                             </div>
@@ -88,7 +88,7 @@ include 'include/header-links.php';
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color">2) How often do you travel in a year?</h6>
+                                            <h6 class="navy-blue">2) How often do you travel in a year?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Less than once</label>
                                             </div>
@@ -110,7 +110,7 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
+                                            <h6 class="navy-blue mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Airplane</label>
                                             </div>
@@ -129,7 +129,7 @@ include 'include/header-links.php';
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">4) What influences your destination choice the most?</h6>
+                                            <h6 class="navy-blue mb-3">4) What influences your destination choice the most?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Budget</label>
                                             </div>
@@ -157,7 +157,7 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- image radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">5) What type of accommodation do you prefer?</h6>
+                                            <h6 class="navy-blue mb-3">5) What type of accommodation do you prefer?</h6>
                                             <div class="radio-group">
                                                 <input type="radio" id="image1" name="image" value="image1" class="none">
                                                 <label class='radio-inline radio-label' for="image1">
@@ -192,7 +192,7 @@ include 'include/header-links.php';
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color">6) How do you plan your travel itinerary?</h6>
+                                            <h6 class="navy-blue">6) How do you plan your travel itinerary?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio">Plan everything meticulously in advance</label>
                                             </div>
@@ -216,7 +216,7 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">7) What activities do you enjoy most while traveling? (Select all that apply)</h6>
+                                            <h6 class="navy-blue mb-3">7) What activities do you enjoy most while traveling? (Select all that apply)</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Sightseeing</label>
                                             </div>
@@ -241,7 +241,7 @@ include 'include/header-links.php';
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">8) How do you prefer to book your travel arrangements?</h6>
+                                            <h6 class="navy-blue mb-3">8) How do you prefer to book your travel arrangements?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Online travel agencies (e.g., Expedia, Booking.com)</label>
                                             </div>
@@ -264,7 +264,7 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- radio button -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">9) How important is sustainable/eco-friendly travel to you?</h6>
+                                            <h6 class="navy-blue mb-3">9) How important is sustainable/eco-friendly travel to you?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Very important</label>
                                             </div>
@@ -277,7 +277,7 @@ include 'include/header-links.php';
                                         </div>
                                         <!-- checkbox -->
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">10) How do you typically document your travel experiences?</h6>
+                                            <h6 class="navy-blue mb-3">10) How do you typically document your travel experiences?</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Photos</label>
                                             </div>
