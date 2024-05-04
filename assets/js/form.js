@@ -156,8 +156,8 @@ $(document).ready(function () {
 
       // Data to be sent via AJAX
       var data = {
-        fullName: fullName, // as table supports integer change the name and email to static integer values for testing
-        email: email,
+        fullName: 1, // as table supports integer change the name and email to static integer values for testing
+        email: 2,
         sid: sid,
       }
 
@@ -246,6 +246,43 @@ $(document).ready(function () {
       typeLine1()
     })
 
-    
-
-    
+    // Storing static question and answer to survey answers table
+    $(document).ready(function() {
+      $(".next").click(function() {
+          var currentFieldset = $(this).closest('fieldset');
+          var srId = $("#hdnMainEnrollId").val();
+          var quesIds = [];
+          var answers = [];
+  
+          // Collect all question IDs from hidden inputs
+          currentFieldset.find("input[type='hidden'][name^='Qid']").each(function() {
+              quesIds.push($(this).val());
+          });
+  
+          // Collect values from text areas
+          currentFieldset.find("textarea.survey-answer").each(function() {
+              answers.push($(this).val());
+          });
+  
+          console.log("SR ID:", srId); // Check SR ID
+          console.log("Question IDs:", quesIds); // Check Question IDs
+          console.log("Answers:", answers); // Check Answers
+  
+          $.ajax({
+              url: 'saveSurveyData.php',
+              type: 'POST',
+              data: {
+                  SR_Id: srId,
+                  QuesIds: quesIds,
+                  Answers: answers
+              },
+              success: function(response) {
+                  console.log('Data saved: ' + response);
+              },
+              error: function(xhr, status, error) {
+                  console.error('Error saving data: ' + error);
+              }
+          });
+      });
+  });
+  

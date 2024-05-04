@@ -45,7 +45,7 @@ include 'include/header-links.php';
                                         <img src="assets/img/begin-survey.jpg" class="w-50">
                                     </div>
 
-                                    <input type="button" name="next" class="next action-button" value="Get Started" />
+                                    <input type="button" name="getStarted" class="next action-button" value="Get Started" />
                                 </fieldset>
                                 <fieldset name="step1">
                                     <div class="form-card">
@@ -69,11 +69,15 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color">1) Consumer Profile: Which of the following best describes your role in e-commerce?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid1" value="35">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
+
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color">2) Frequency of Online Transactions: How often do you engage in online transactions?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid2" value="36">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
+
                                         </div>
                                     </div>
                                     <input type="button" name="next" class="next action-button" value="Next" />
@@ -82,11 +86,13 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">3) Preferred E-commerce Platforms: Which platform do you most frequently use for online purchases?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid3" value="37">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">4) Factors Influencing Online Purchases: What most influences your decision to purchase items online?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid4" value="38">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -96,11 +102,13 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">5) Preferred Payment Methods: How do you prefer to pay for online purchases?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid5" value="39">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">6) Market Analysis: What methods do you use to conduct market research for your business?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid6" value="40">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -110,11 +118,13 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">7) Business Performance: How would you rate your business's performance in the past year?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid7" value="41">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">8) Marketing Strategies: Which marketing channels do you primarily use to promote your business?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid8" value="42">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -124,11 +134,13 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">9) Customer Relations: How do you gather feedback from your customers?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid9" value="43">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                         <div class="mb-30">
                                             <h6 class="title-color mb-3">10) Future Planning: What are your primary goals for business growth in the next year?</h6>
-                                            <textarea class="form-control" rows="3"></textarea>
+                                            <input type="hidden" name="Qid10" value="44">
+                                            <textarea class="form-control survey-answer" rows="3" name="answerText"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
