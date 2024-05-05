@@ -2,7 +2,9 @@
 
 
 <html lang="en">
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php'; 
+
+?>
 
 <?php
 include "../config/connection.php";
