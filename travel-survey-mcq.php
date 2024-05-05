@@ -71,40 +71,40 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue">1) What type of traveler are you?</h6>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Adventure seeker</label>
+                                                <label><input type="checkbox" value="adventure-seeker" qid="1">Adventure seeker</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Relaxation enthusiast</label>
+                                                <label><input type="checkbox" value="relaxation-enthusiast" qid="1">Relaxation enthusiast</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Foodie traveler</label>
+                                                <label><input type="checkbox" value="foodie-traveler" qid="1">Foodie traveler</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Relaxation enthusiast</label>
+                                                <label><input type="checkbox" value="relaxation-enthusiast" qid="1">Relaxation enthusiast</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Business traveler</label>
+                                                <label><input type="checkbox" value="business-traveler" qid="1">Business traveler</label>
                                             </div>
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
                                             <h6 class="navy-blue">2) How often do you travel in a year?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio" checked>Less than once</label>
+                                                <label><input type="radio" name="optradio" value="less-than-once" qid="2">Less than once</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">1-2 times</label>
+                                                <label><input type="radio" name="optradio" value="1-2-times" qid="2">1-2 times</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">3-5 times</label>
+                                                <label><input type="radio" name="optradio" value="3-5-times" qid="2">3-5 times</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">More than 5 times</label>
+                                                <label><input type="radio" name="optradio" value="more-than-5-times" qid="2">More than 5 times</label>
                                             </div>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                    <input type="button" name="next" class="next action-button" value="Next" />
+                                    <input type="button" name="next" class="next action-button" value="Next" onclick="saveDataAndSend('step2');" />
                                 </fieldset>
                                 <fieldset name="step3">
                                     <div class="form-card">
@@ -112,28 +112,28 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">3) Which mode of transportation do you prefer for long-distance travel? (Can select more than one)</h6>
                                             <div class="radio-group">
-                                                <input type="checkbox" id="image6" name="image6" value="image6" class="none">
-                                                <label class='checkbox-inline radio-label' for="image6">
+                                                <input type="checkbox" id="airplane" name="airplane" value="airplane" qid="3" class="none">
+                                                <label class='checkbox-inline radio-label' for="airplane">
                                                     <img src="assets/img/icons/airplane.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Airplane</figcaption>
                                                 </label>
-                                                <input type="checkbox" id="image7" name="image7" value="image7" class="none">
-                                                <label class='checkbox-inline radio-label' for="image7">
+                                                <input type="checkbox" id="train" name="train" value="train" qid="3" class="none">
+                                                <label class='checkbox-inline radio-label' for="train">
                                                     <img src="assets/img/icons/train.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Train</figcaption>
                                                 </label>
-                                                <input type="checkbox" id="image8" name="image8" value="image8" class="none">
-                                                <label class='checkbox-inline radio-label' for="image8">
+                                                <input type="checkbox" id="bus" name="bus" value="bus" qid="3" class="none">
+                                                <label class='checkbox-inline radio-label' for="bus">
                                                     <img src="assets/img/icons/bus.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Bus</figcaption>
                                                 </label>
-                                                <input type="checkbox" id="image9" name="image9" value="image9" class="none">
-                                                <label class='checkbox-inline radio-label' for="image9">
+                                                <input type="checkbox" id="car" name="car" value="car" qid="3" class="none">
+                                                <label class='checkbox-inline radio-label' for="car">
                                                     <img src="assets/img/icons/car.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Car</figcaption>
                                                 </label>
-                                                <input type="checkbox" id="image10" name="image10" value="image10" class="none">
-                                                <label class='checkbox-inline radio-label' for="image10">
+                                                <input type="checkbox" id="cruise" name="cruise" value="cruise" qid="3" class="none">
+                                                <label class='checkbox-inline radio-label' for="cruise">
                                                     <img src="assets/img/icons/cruise.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Cruise</figcaption>
                                                 </label>
@@ -143,27 +143,27 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">4) What influences your destination choice the most?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio" checked>Budget</label>
+                                                <label><input type="radio" name="optradio" value="budget" qid="4">Budget</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Cultural attractions</label>
+                                                <label><input type="radio" name="optradio" value="cultural-attractions" qid="4">Cultural attractions</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Natural landscapes</label>
+                                                <label><input type="radio" name="optradio" value="natural-landscapes" qid="4">Natural landscapes</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Cuisine</label>
+                                                <label><input type="radio" name="optradio" value="cuisine" qid="4">Cuisine</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Recommendations from friends/family</label>
+                                                <label><input type="radio" name="optradio" value="recommendations" qid="4">Recommendations from friends/family</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Events/ festivals</label>
+                                                <label><input type="radio" name="optradio" value="events" qid="4">Events/ festivals</label>
                                             </div>
                                         </div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                    <input type="button" name="next" class="next action-button" value="Next" />
+                                    <input type="button" name="next" class="next action-button" value="Next" onclick="saveDataAndSend('step3');" />
                                 </fieldset>
                                 <fieldset name="step4">
                                     <div class="form-card">
@@ -171,32 +171,32 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">5) What type of accommodation do you prefer?</h6>
                                             <div class="radio-group">
-                                                <input type="radio" id="image1" name="image" value="image1" class="none">
-                                                <label class='radio-inline radio-label' for="image1">
+                                                <input type="radio" id="hotel" name="image" value="hotel" qid="5" class="none">
+                                                <label class='radio-inline radio-label' for="hotel">
                                                     <img src="assets/img/icons/hotel.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Hotel</figcaption>
                                                 </label>
 
-                                                <input type="radio" id="image2" name="image" value="image2" class="none">
-                                                <label class='radio-inline radio-label' for="image2">
+                                                <input type="radio" id="hostel" name="image" value="hostel" qid="5" class="none">
+                                                <label class='radio-inline radio-label' for="hostel">
                                                     <img src="assets/img/icons/hostel.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Hostel</figcaption>
                                                 </label>
 
-                                                <input type="radio" id="image3" name="image" value="image3" class="none">
-                                                <label class='radio-inline radio-label' for="image3">
+                                                <input type="radio" id="vacation" name="image" value="vacation" qid="5" class="none">
+                                                <label class='radio-inline radio-label' for="vacation">
                                                     <img src="assets/img/icons/vacation.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Vacation Rental</figcaption>
                                                 </label>
 
-                                                <input type="radio" id="image4" name="image" value="image4" class="none">
-                                                <label class='radio-inline radio-label' for="image4">
+                                                <input type="radio" id="bed-and-breakfast" name="image" value="bed-and-breakfast" qid="5" class="none">
+                                                <label class='radio-inline radio-label' for="bed-and-breakfast">
                                                     <img src="assets/img/icons/bed-and-breakfast.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Bed and Breakfast</figcaption>
                                                 </label>
 
-                                                <input type="radio" id="image5" name="image" value="image5" class="none">
-                                                <label class='radio-inline radio-label' for="image5">
+                                                <input type="radio" id="camping" name="image" value="camping" qid="5" class="none">
+                                                <label class='radio-inline radio-label' for="camping">
                                                     <img src="assets/img/icons/camping.png" height="80px" class="radio-button-img">
                                                     <figcaption class="text-center caption-position">Camping</figcaption>
                                                 </label>
@@ -206,16 +206,16 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue">6) How do you plan your travel itinerary?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Plan everything meticulously in advance</label>
+                                                <label><input type="radio" name="optradio" value="plan" qid="6">Plan everything meticulously in advance</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Have a general idea but leave room for spontaneity</label>
+                                                <label><input type="radio" name="optradio" value="idea" qid="6">Have a general idea but leave room for spontaneity</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Completely spontaneous, decide on the go</label>
+                                                <label><input type="radio" name="optradio" value="spontaneous" qid="6">Completely spontaneous, decide on the go</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Other (please specify):</label>
+                                                <label><input type="radio" name="optradio" value="other" qid="6">Other (please specify):</label>
                                                 <input type="text" class="form-control mt-2 ml-20">
                                             </div>
 
@@ -230,41 +230,41 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">7) What activities do you enjoy most while traveling? (Select all that apply)</h6>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Sightseeing</label>
+                                                <label><input type="checkbox" value="sightseeing" qid="7">Sightseeing</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Outdoor adventures (hiking, snorkeling, etc.)</label>
+                                                <label><input type="checkbox" value="outdoor" qid="7">Outdoor adventures (hiking, snorkeling, etc.)</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Culinary experiences</label>
+                                                <label><input type="checkbox" value="culinary" qid="7">Culinary experiences</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Shopping</label>
+                                                <label><input type="checkbox" value="shopping" qid="7">Shopping</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Cultural experiences (museums, historical sites, etc.)</label>
+                                                <label><input type="checkbox" value="cultural" qid="7">Cultural experiences (museums, historical sites, etc.)</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Relaxing on the beach/poolside</label>
+                                                <label><input type="checkbox" value="relaxing" qid="7">Relaxing on the beach/poolside</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Nightlife</label>
+                                                <label><input type="checkbox" value="nightlife" qid="7">Nightlife</label>
                                             </div>
                                         </div>
                                         <!-- radio button -->
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">8) How do you prefer to book your travel arrangements?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio" checked>Online travel agencies (e.g., Expedia, Booking.com)</label>
+                                                <label><input type="radio" name="optradio" value="online" qid="8">Online travel agencies (e.g., Expedia, Booking.com)</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Directly through the airline/hotel website</label>
+                                                <label><input type="radio" name="optradio" value="directly" qid="8">Directly through the airline/hotel website</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Travel agent</label>
+                                                <label><input type="radio" name="optradio" value="travel" qid="8">Travel agent</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Other (please specify):</label>
+                                                <label><input type="radio" name="optradio" value="other2" qid="8">Other (please specify):</label>
                                                 <input type="text" class="form-control mt-2 ml-20">
                                             </div>
                                         </div>
@@ -278,32 +278,32 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">9) How important is sustainable/eco-friendly travel to you?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio" checked>Very important</label>
+                                                <label><input type="radio" name="optradio" value="very-important" qid="9">Very important</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Somewhat important</label>
+                                                <label><input type="radio" name="optradio" value="somewhat-important" qid="9">Somewhat important</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="optradio">Not important</label>
+                                                <label><input type="radio" name="optradio" value="not-important" qid="9">Not important</label>
                                             </div>
                                         </div>
                                         <!-- checkbox -->
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">10) How do you typically document your travel experiences?</h6>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Photos</label>
+                                                <label><input type="checkbox" value="photos" qid="10" value="photos" qid="10">Photos</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Videos</label>
+                                                <label><input type="checkbox" value="videos" qid="10">Videos</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Journals/blogs</label>
+                                                <label><input type="checkbox" value="journals" qid="10">Journals/blogs</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">Social media posts</label>
+                                                <label><input type="checkbox" value="smp" qid="10">Social media posts</label>
                                             </div>
                                             <div class="checkbox">
-                                                <label><input type="checkbox" value="">None</label>
+                                                <label><input type="checkbox" value="none" qid="10">None</label>
                                             </div>
                                         </div>
                                     </div>
@@ -342,6 +342,53 @@ include 'include/header-links.php';
     <?php
     include 'include/footer-scripts.php';
     ?>
+
+    <script type="text/javascript">
+        function saveDataAndSend(fieldID) {
+            var formDataArray = [];
+            var fieldset = $('fieldset[name="' + fieldID + '"]');
+            var ResponsID = $('#hdnMainEnrollId').val();
+
+            // Loop through selected input elements within the fieldset
+            fieldset.find('input:checked, input[type="text"], select, textarea').each(function() {
+                var fieldName = $(this).attr('name');
+                var qidValue = $(this).attr('qid'); // Retrieve the qid attribute value
+                var value = $(this).val();
+
+                if (fieldName !== "txtFullname") {
+                    // Debug information
+                    console.log("Fieldname- " + fieldName + " -- qid-" + qidValue + "--" + value);
+
+                    // Store field name, qid, and value in a field data object
+                    var fieldData = {
+                        qid: qidValue,
+                        answer: value,
+                        SR_Id: ResponsID
+                    };
+
+                    // Push the field data object into the formDataArray
+                    formDataArray.push(fieldData);
+                }
+            });
+
+            console.log(formDataArray);
+
+            // Send data to the server using AJAX
+            $.ajax({
+                url: 'save_answers.php',
+                type: 'POST',
+                data: {
+                    formData: formDataArray
+                },
+                success: function(response) {
+                    console.log('Data saved successfully:', response);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            });
+        }
+    </script>
 
 </body>
 

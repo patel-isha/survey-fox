@@ -27,6 +27,9 @@
 
 .w-40 {
     width: 40%;
+    width: -webkit-calc(40%);
+    width: -moz-calc(40%);
+    width: calc(40%);
 }
 
 .br8 {
