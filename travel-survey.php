@@ -18,7 +18,7 @@ include 'include/header-links.php';
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card px-0 pb-0 mt-3 mb-3">
                     <div class="bg-white pt-2 pb-2 br8">
-                        <img src="assets/img/logo/logo.png" class="m-auto w-30">
+                        <img src="assets/img/logo/logo-blue.png" class="m-auto w-30">
                     </div>
                     <div class="row">
                         <div class="col-md-12 mx-0">
@@ -135,26 +135,21 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Finish" />
                                 </fieldset>
-                              <fieldset name="step7">
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-3">
                                                 <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                             </div>
                                         </div>
                                         <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
-
-
-
-        
+                                            <div class="col-6 text-center">
+                                                <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                            </div>
                                         </div>
-                                        </div>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
                                                 <h5>You Have Successfully Completed The Survey</h5>

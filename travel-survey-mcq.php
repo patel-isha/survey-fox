@@ -110,21 +110,33 @@ include 'include/header-links.php';
                                     <div class="form-card">
                                         <!-- checkbox -->
                                         <div class="mb-30">
-                                            <h6 class="navy-blue mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Airplane</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Train</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Bus</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Car</label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label><input type="checkbox" value="">Cruise</label>
+                                            <h6 class="navy-blue mb-3">3) Which mode of transportation do you prefer for long-distance travel? (Can select more than one)</h6>
+                                            <div class="radio-group">
+                                                <input type="checkbox" id="image6" name="image6" value="image6" class="none">
+                                                <label class='checkbox-inline radio-label' for="image6">
+                                                    <img src="assets/img/icons/airplane.png" height="80px" class="radio-button-img">
+                                                    <figcaption class="text-center caption-position">Airplane</figcaption>
+                                                </label>
+                                                <input type="checkbox" id="image7" name="image7" value="image7" class="none">
+                                                <label class='checkbox-inline radio-label' for="image7">
+                                                    <img src="assets/img/icons/train.png" height="80px" class="radio-button-img">
+                                                    <figcaption class="text-center caption-position">Train</figcaption>
+                                                </label>
+                                                <input type="checkbox" id="image8" name="image8" value="image8" class="none">
+                                                <label class='checkbox-inline radio-label' for="image8">
+                                                    <img src="assets/img/icons/bus.png" height="80px" class="radio-button-img">
+                                                    <figcaption class="text-center caption-position">Bus</figcaption>
+                                                </label>
+                                                <input type="checkbox" id="image9" name="image9" value="image9" class="none">
+                                                <label class='checkbox-inline radio-label' for="image9">
+                                                    <img src="assets/img/icons/car.png" height="80px" class="radio-button-img">
+                                                    <figcaption class="text-center caption-position">Car</figcaption>
+                                                </label>
+                                                <input type="checkbox" id="image10" name="image10" value="image10" class="none">
+                                                <label class='checkbox-inline radio-label' for="image10">
+                                                    <img src="assets/img/icons/cruise.png" height="80px" class="radio-button-img">
+                                                    <figcaption class="text-center caption-position">Cruise</figcaption>
+                                                </label>
                                             </div>
                                         </div>
                                         <!-- radio button -->
@@ -298,26 +310,21 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Finish" />
                                 </fieldset>
-                              <fieldset name="step7">
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-3">
                                                 <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                             </div>
                                         </div>
                                         <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
-
-
-
-        
+                                            <div class="col-6 text-center">
+                                                <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                            </div>
                                         </div>
-                                        </div>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
                                                 <h5>You Have Successfully Completed The Survey</h5>

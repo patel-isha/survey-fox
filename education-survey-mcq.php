@@ -453,32 +453,27 @@ include 'include/header-links.php';
                                             <input type="button" name="next" class="next action-button" value="Finish" />
                                         </fieldset>
                                         <fieldset name="step7">
-                                    <div class="form-card">
-                                        <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-3">
-                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                            <div class="form-card">
+                                                <h2 class="fs-title text-center">Success !</h2>
+                                                <br>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-3">
+                                                        <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center mt-3">
+                                                    <div class="col-6 text-center">
+                                                        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-7 text-center">
+                                                        <h5>You Have Successfully Completed The Survey</h5>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
-
-
-
-        
-                                        </div>
-                                        </div>
-                                        <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-7 text-center">
-                                                <h5>You Have Successfully Completed The Survey</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                        </fieldset>
                                     </form>
                                 </div>
                             </div>
