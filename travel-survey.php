@@ -18,7 +18,7 @@ include 'include/header-links.php';
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card px-0 pb-0 mt-3 mb-3">
                     <div class="bg-white pt-2 pb-2 br8">
-                        <img src="assets/img/logo/logo.png" class="m-auto w-30">
+                        <img src="assets/img/logo/logo-blue.png" class="m-auto w-30">
                     </div>
                     <div class="row">
                         <div class="col-md-12 mx-0">
