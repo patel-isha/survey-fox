@@ -70,7 +70,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue">1) Consumer Profile: Which of the following best describes your role in e-commerce?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" value="Online shopper" name="eCommerceRole" >Online shopper</label>
+                                                <label><input type="radio" value="Online shopper" name="eCommerceRole">Online shopper</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" value="Small business owner" name="eCommerceRole">Small business owner</label>
@@ -85,7 +85,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue">2) Frequency of Online Transactions: How often do you engage in online transactions?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlineTransactionFrequency" value="Daily" >Daily</label>
+                                                <label><input type="radio" name="onlineTransactionFrequency" value="Daily">Daily</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="onlineTransactionFrequency" value="Weekly">Weekly</label>
@@ -105,7 +105,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">3) Preferred E-commerce Platforms: Which platform do you most frequently use for online purchases?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="preferredEcommerce" value="Amazon" >Amazon</label>
+                                                <label><input type="radio" name="preferredEcommerce" value="Amazon">Amazon</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="preferredEcommerce" value="eBay">eBay</label>
@@ -120,7 +120,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">4) Factors Influencing Online Purchases: What most influences your decision to purchase items online?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlinePurchase" value="Price" >Price</label>
+                                                <label><input type="radio" name="onlinePurchase" value="Price">Price</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="onlinePurchase" value="Product reviews/ratings">Product reviews/ratings</label>
@@ -141,7 +141,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">5) Preferred Payment Methods: How do you prefer to pay for online purchases?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="paymentMethod" value="Credit/debit card" >Credit/debit card</label>
+                                                <label><input type="radio" name="paymentMethod" value="Credit/debit card">Credit/debit card</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="paymentMethod" value="Paypal">Paypal</label>
@@ -156,7 +156,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">6) Market Analysis: What methods do you use to conduct market research for your business?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketAnalysis" value="Surveys and interviews" >Surveys and interviews</label>
+                                                <label><input type="radio" name="marketAnalysis" value="Surveys and interviews">Surveys and interviews</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="marketAnalysis" value="Competitive analysis">Competitive analysis</label>
@@ -177,7 +177,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">7) Business Performance: How would you rate your business's performance in the past year?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" value="Excellent" >Excellent</label>
+                                                <label><input type="radio" name="businessPerformance" value="Excellent">Excellent</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="businessPerformance" value="Good">Good</label>
@@ -192,7 +192,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">8) Marketing Strategies: Which marketing channels do you primarily use to promote your business?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" value="Surveys and interviews" >Surveys and interviews</label>
+                                                <label><input type="radio" name="marketingStrategies" value="Surveys and interviews">Surveys and interviews</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="marketingStrategies" value="Competitive analysis">Competitive analysis</label>
@@ -213,7 +213,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">9) Customer Relations: How do you gather feedback from your customers?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="customerRelations" value="Online surveys" >Online surveys</label>
+                                                <label><input type="radio" name="customerRelations" value="Online surveys">Online surveys</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="customerRelations" value="Feedback forms on website">Feedback forms on website</label>
@@ -228,7 +228,7 @@ include 'include/header-links.php';
                                         <div class="mb-30">
                                             <h6 class="navy-blue mb-3">10) Future Planning: What are your primary goals for business growth in the next year?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" value="Increase revenue" >Increase revenue</label>
+                                                <label><input type="radio" name="marketingStrategies" value="Increase revenue">Increase revenue</label>
                                             </div>
                                             <div class="radio">
                                                 <label><input type="radio" name="marketingStrategies" value="Expand market reach">Expand market reach</label>
@@ -244,26 +244,21 @@ include 'include/header-links.php';
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
-                              <fieldset name="step7">
+                                <fieldset name="step7">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-3">
                                                 <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                             </div>
                                         </div>
                                         <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
-
-
-
-        
+                                            <div class="col-6 text-center">
+                                                <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                            </div>
                                         </div>
-                                        </div>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
                                                 <h5>You Have Successfully Completed The Survey</h5>
