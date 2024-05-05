@@ -43,47 +43,27 @@ h4 {
 
 </style>
 
-
 <!-- Modal -->
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-include 'config/connection.php';
-include 'include/header-links.php';
-
-?>
-
-
- <div class="modal fade" id="myModal" role="dialog">
-     <div class="modal-dialog">
-         <div class="card">
-             <div class="text-right cross"> <i class="fa fa-times"></i> </div>
-             <div class="card-body text-center"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
-                 <h4>CONGRATULATIONS!</h4>
-                 <img src="../survey-fox/assets/img/logo/logo.png">
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="card">
+            <div class="text-right cross"> <i class="fa fa-times"></i> </div>
+            <div class="card-body text-center">
+                <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+                <h4>CONGRATULATIONS!</h4>
+                <img src="../survey-fox/assets/img/logo/logo.png">
                 <p class="mt-3">You have completed the survey, please click on the below button to proceed to your payment credit information.</p>
-                <input type="button"  name="next" class="next action-button" value="Next" />
-             </div>
-         </div>
-     </div>
- </div>
+                <a href="invoice.php" class="next action-button">Open To see your Winnings</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-<!-- jQuery -->
+<!-- jQuery and Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Bootstrap JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $('#openModalBtn').click(function() {
-            $('#myModal').modal('show');
-        });
-        
-        // Automatically trigger modal when page loads
-        $('#myModal').modal('show');
-    });
+$(document).ready(function() {
+    $('#myModal').modal('show');
+});
 </script>
-
-

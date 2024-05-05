@@ -30,12 +30,12 @@ include 'include/header-links.php';
                                     <li id="step3"></li>
                                     <li id="step4"></li>
                                 </ul>
-                                <h2 class="title-color"><strong>Travel <span class="orange">Survey</span></strong></h2>
+                                <h3 class="navy-blue"><strong>Travel <span class="light-blue">Survey</span></strong></h3>
                                 <!-- fieldsets -->
                                 <fieldset>
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color">1) What type of traveler are you?</h6>
+                                            <h6 class="navy-blue">1) What type of traveler are you?</h6>
                                             <div class="checkbox">
                                                 <label><input type="checkbox" value="">Option 1</label>
                                             </div>
@@ -47,7 +47,7 @@ include 'include/header-links.php';
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color">2) How often do you travel in a year?</h6>
+                                            <h6 class="navy-blue">2) How often do you travel in a year?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Option 1</label>
                                             </div>
@@ -64,11 +64,11 @@ include 'include/header-links.php';
                                 <fieldset>
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
+                                            <h6 class="navy-blue mb-3">3) Which mode of transportation do you prefer for long-distance travel?</h6>
                                             <input type="text" class="form-control">
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">4) What influences your destination choice the most?</h6>
+                                            <h6 class="navy-blue mb-3">4) What influences your destination choice the most?</h6>
                                             <textarea class="form-control" rows="5"></textarea>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ include 'include/header-links.php';
                                 <fieldset>
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">5) What type of accommodation do you prefer?</h6>
+                                            <h6 class="navy-blue mb-3">5) What type of accommodation do you prefer?</h6>
                                             <div class="radio-group">
                                                 <input type="radio" id="image1" name="image" value="image1" class="none">
                                                 <label class='radio-inline radio-label' for="image1">
@@ -100,7 +100,7 @@ include 'include/header-links.php';
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color">6) How do you plan your travel itinerary?</h6>
+                                            <h6 class="navy-blue">6) How do you plan your travel itinerary?</h6>
                                             <div class="radio">
                                                 <label><input type="radio" name="optradio" checked>Option 1</label>
                                             </div>
