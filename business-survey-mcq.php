@@ -14,11 +14,11 @@ include 'include/header-links.php';
 <body>
     <!-- MultiStep Form -->
     <div class="container-fluid" id="grad1">
-        <div class="row justify-content-center mt-0">
+        <div class="row justify-content-center align-items-center h-inherit mt-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card px-0 pb-0 mt-3 mb-3">
-                    <div class="bg-theme pt-2 pb-2 br8">
-                        <img src="assets/img/logo/logo.png" class="m-auto w-30">
+                    <div class="bg-white pt-2 br8">
+                        <img src="assets/img/logo/logo.png" class="m-auto w-25">
                     </div>
                     <div class="row">
                         <div class="col-md-12 mx-0">
@@ -38,7 +38,7 @@ include 'include/header-links.php';
                                 <!-- fieldsets -->
                                 <fieldset name="step0">
                                     <div class="form-card text-center pb-0">
-                                        <div class="typewriter mb-3">
+                                        <div class="typewriter mb-1">
                                             <h4 class="tagline mb-2 line1">Driving Business Forward</h4>
                                             <h4 class="tagline light-blue line2 mb-2 hidden">Start Your Journey Now!</h4>
                                         </div>
@@ -272,6 +272,9 @@ include 'include/header-links.php';
                 </div>
             </div>
         </div>
+        <footer class="text-center mt-5">
+            <p class="mb-0 pb-2 text-white">Powered by Survey Fox</p>
+        </footer>
     </div>
 
     <?php

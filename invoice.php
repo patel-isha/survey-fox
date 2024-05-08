@@ -29,10 +29,10 @@ if ($srid > 0) {
 
 <body>
     <div class="container-fluid" id="grad1">
-        <div class="row justify-content-center mt-0">
+        <div class="row justify-content-center align-items-center h-inherit mt-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card p-2 mt-3 mb-3">
-                    <div class="bg-theme pt-2 pb-2 br8">
+                    <div class="bg-white pt-2 br8">
                         <h2 class="fs-title text-center">Invoice</h2>
                     </div>
                     <div class="p-3">
@@ -75,6 +75,9 @@ if ($srid > 0) {
                 </div>
             </div>
         </div>
+        <footer class="text-center mt-5">
+            <p class="mb-0 pb-2 text-white">Powered by Survey Fox</p>
+        </footer>
     </div>
     <?php include 'include/footer-scripts.php'; ?>
 </body>
