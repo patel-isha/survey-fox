@@ -58,69 +58,66 @@ include 'include/header-links.php';
                                     <li id="step7"></li>
                                 </ul>
 
-                                        <h3 class="navy-blue"><strong><?php echo $sur_row['Name']; ?> <span class="light-blue">Survey</span></strong></h3>
-                                        <!-- fieldsets -->
-                                        <fieldset name="step0">
-                                            <div class="typewriter mb-3">
-                                                <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
-                                                    <span class="wrap"></span>
-
+                                <h3 class="navy-blue"><strong><?php echo $sur_row['Name']; ?> <span
+                                            class="light-blue">Survey</span></strong></h3>
+                                <!-- fieldsets -->
+                                <fieldset name="step0">
+                                    <div class="form-card text-center pb-0">
+                                        <div class="typewriter mb-3">
+                                            <h4 class="tagline mb-2 line1">Your answers matters for the company.</h4>
+                                            <h4 class="tagline light-blue line2 mb-2 hidden">Start Your Journey Now!
+                                            </h4>
                                         </div>
+                                        <img src="assets/img/begin-survey.jpg" class="w-40">
                                     </div>
-                                    <div class="form-card pb-0">
-                                        <p>
-                                                <?php echo $sur_row['Description']; ?>
-                                                <img src="assets/img/logo/landing.png"  alt="Description of the image"
-                                                style="width: 100%; height: auto;">
-                                                            </p>
-
-                                    </div>
+                                    
                                     <input type="button" name="next" class="next action-button w-25"
                                         value="Begin Survey" />
                                 </fieldset>
 
-                                        <fieldset name="step1">
-                                            <div class="form-card">
-                                                <div class="mb-30">
-                                                    <label for="txtFullname">Full name:</label>
-                                                    <input type="text" class="form-control" id="txtFullname" name="txtFullname"
-                                                        placeholder="Please enter your full name" required>
-                                                </div>
-                                                <div class="mb-30">
-                                                    <label for="txtEmail">Email Id:</label>
-                                                    <input type="email" class="form-control" id="txtEmail" name="txtEmail"
-                                                        placeholder="Please enter your email id" required>
-                                                </div>
-                                                <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+                                <fieldset name="step1">
+                                    <div class="form-card">
+                                        <div class="mb-30">
+                                            <label for="txtFullname">Full name:</label>
+                                            <input type="text" class="form-control" id="txtFullname" name="txtFullname"
+                                                placeholder="Please enter your full name" required>
+                                        </div>
+                                        <div class="mb-30">
+                                            <label for="txtEmail">Email Id:</label>
+                                            <input type="email" class="form-control" id="txtEmail" name="txtEmail"
+                                                placeholder="Please enter your email id" required>
+                                        </div>
+                                        <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
+                                    </div>
+                                    <input type="button" class="action-button next" value="Start"
+                                        onClick="EnrollSurvey();" />
+                                    <!--  -->
+                                </fieldset>
+                                <fieldset name="step2">
+                                    <div class="form-card">
+                                        <!-- checkbox -->
+                                        <div class="mb-30">
+                                            <h6 class="navy-blue">1) What is your age group?</h6>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optAge" checked value="Under 18"
+                                                        qid="24">Under 18</label>
                                             </div>
-                                            <input type="button" class="action-button next" value="Start" onClick="EnrollSurvey();" />
-                                            <!--  -->
-                                        </fieldset>
-                                        <fieldset name="step2">
-                                            <div class="form-card">
-                                                <!-- checkbox -->
-                                                <div class="mb-30">
-                                                    <h6 class="navy-blue">1) What is your age group?</h6>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optAge" checked value="Under 18"
-                                                                qid="24">Under 18</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optAge" value="18 to 24" qid="24">18 to
-                                                            24</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optAge" value="25 to 45" qid="24">25 to
-                                                            45</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optAge" value="46 to 60" qid="24">46 to
-                                                            60</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optAge" value="Above 60" qid="24">Above
-                                                            60</label>
-                                                    </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optAge" value="18 to 24" qid="24">18 to
+                                                    24</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optAge" value="25 to 45" qid="24">25 to
+                                                    45</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optAge" value="46 to 60" qid="24">46 to
+                                                    60</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optAge" value="Above 60" qid="24">Above
+                                                    60</label>
+                                            </div>
 
                                                 </div>
                                                 <!-- radio button -->
@@ -248,92 +245,92 @@ include 'include/header-links.php';
                                                         <label><input type="radio" name="optInfo" value="Website" qid="31">Website</label>
                                                     </div>
 
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Posters/flyers"
-                                                                qid="31">Posters/flyers</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Other"
-                                                                qid="31">Other (please specify)</label>
-                                                        <input type="text" class="form-control mt-2 ml-20" qid="31"
-                                                            name="qid31other">
-                                                    </div>
-                                                </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optInfo" checked value="Posters/flyers"
+                                                        qid="31">Posters/flyers</label>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
-                                            <input type="button" name="make_payment" class="next action-button" value="Next" />
-                                        </fieldset>
-                                        <fieldset name="step5">
-                                            <div class="form-card">
-                                                <!-- checkbox -->
-                                                <div class="mb-30">
-                                                    <h6 class="navy-blue mb-3">9) How satisfied are you with the frequency and
-                                                        clarity of communication from our institute?</h6>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" checked
-                                                                value="Very satisfied" qid="32">Very satisfied</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Satisfied"
-                                                                qid="32">Satisfied</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Dissatisfied"
-                                                                qid="32">Dissatisfied</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction"
-                                                                value="Very dissatisfied" qid="32">Very dissatisfied</label>
-                                                    </div>
-                                                </div>
-                                                <!-- radio button -->
-                                                <div class="mb-30">
-                                                    <h6 class="title-color mb-3">10) Do you feel our institute promotes
-                                                        diversity and inclusion effectively?</h6>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" checked value="Yes"
-                                                                qid="33">Yes</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" value="No"
-                                                                qid="33">No</label>
-                                                    </div>
-                                                </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optInfo" checked value="Other"
+                                                        qid="31">Other (please specify)</label>
+                                                <input type="text" class="form-control mt-2 ml-20" qid="31"
+                                                    name="qid31other">
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous"
-                                                value="Previous" />
-                                            <input type="button" name="next" class="next action-button" value="Next" />
-                                        </fieldset>
-                                        <fieldset name="step6">
-                                            <div class="form-card">
-                                                <!-- radio button -->
-                                                <div class="mb-30">
-                                                    <h6 class="title-color mb-3">11) How likely are you to recommend our
-                                                        institute or website to others?</h6>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" checked
-                                                                value="Very likely" qid="34">Very likely</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Likely"
-                                                                qid="34">Likely</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Neutral"
-                                                                qid="34">Neutral</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Unlikely"
-                                                                qid="34">Unlikely</label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Very unlikely"
-                                                                qid="34">Very unlikely</label>
-                                                    </div>
-                                                </div>
-                                                <!-- questions dynamic -->
-                                                <?php
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="make_payment" class="next action-button" value="Next" />
+                                </fieldset>
+                                <fieldset name="step5">
+                                    <div class="form-card">
+                                        <!-- checkbox -->
+                                        <div class="mb-30">
+                                            <h6 class="navy-blue mb-3">9) How satisfied are you with the frequency and
+                                                clarity of communication from our institute?</h6>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optSatisfaction" checked
+                                                        value="Very satisfied" qid="32">Very satisfied</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optSatisfaction" value="Satisfied"
+                                                        qid="32">Satisfied</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optSatisfaction" value="Dissatisfied"
+                                                        qid="32">Dissatisfied</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optSatisfaction"
+                                                        value="Very dissatisfied" qid="32">Very dissatisfied</label>
+                                            </div>
+                                        </div>
+                                        <!-- radio button -->
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">10) Do you feel our institute promotes
+                                                diversity and inclusion effectively?</h6>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optFeelProm" checked value="Yes"
+                                                        qid="33">Yes</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optFeelProm" value="No"
+                                                        qid="33">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next" />
+                                </fieldset>
+                                <fieldset name="step6">
+                                    <div class="form-card">
+                                        <!-- radio button -->
+                                        <div class="mb-30">
+                                            <h6 class="title-color mb-3">11) How likely are you to recommend our
+                                                institute or website to others?</h6>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optRecommend" checked
+                                                        value="Very likely" qid="34">Very likely</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optRecommend" value="Likely"
+                                                        qid="34">Likely</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optRecommend" value="Neutral"
+                                                        qid="34">Neutral</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optRecommend" value="Unlikely"
+                                                        qid="34">Unlikely</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optRecommend" value="Very unlikely"
+                                                        qid="34">Very unlikely</label>
+                                            </div>
+                                        </div>
+                                        <!-- questions dynamic -->
+                                        <?php
 
                                                 $sid = $_GET['sid'];
 
@@ -399,8 +396,8 @@ include 'include/header-links.php';
                                                         </div>
 
 
-                                                <?php
-                                        
+                                        <?php
+
                                                         $Index = $Index + 1;
                                                     }
 
@@ -542,14 +539,13 @@ include 'include/header-links.php';
     </script>
 
     <script>
-    
     function saveDataAndSend(fieldID) {
         var formDataArray = [];
         var fieldset = $('fieldset[name="' + fieldID + '"]');
         var ResponsID = $('#hdnMainEnrollId').val();
-       
+
         // Loop through selected input elements within the fieldset
-        fieldset.find('input:checked, input[type="text"], select, textarea').each(function () {
+        fieldset.find('input:checked, input[type="text"], select, textarea').each(function() {
             var fieldName = $(this).attr('name');
             var qidValue = $(this).attr('qid'); // Retrieve the qid attribute value
             var value = $(this).val();
@@ -571,7 +567,7 @@ include 'include/header-links.php';
             });
 
         console.log(formDataArray);
-        
+
         // Send data to the server using AJAX
         $.ajax({
             url: 'save_answers.php',
@@ -579,10 +575,10 @@ include 'include/header-links.php';
             data: {
                 formData: formDataArray
             },
-            success: function (response) {
+            success: function(response) {
                 console.log('Data saved successfully:', response);
             },
-            error: function (xhr, status, error) {
+            error: function(xhr, status, error) {
                 console.error('Error:', error);
             }
         });
