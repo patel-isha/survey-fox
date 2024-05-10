@@ -28,83 +28,12 @@
 
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="city-manage.php" aria-expanded="false"><i
-                                class="fa fa-fw fa-map"></i>City Management</a>
-
+                        <a class="nav-link" href="survey-view-all.php" aria-expanded="false"><i
+                                class="fa fa-fw fa-list"></i>Survey Management</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-car"></i>Car
-                            Management</a>
-                        <div id="submenu-2" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="car-category.php">Category Management</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="car-brands.php">Brand Management</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="car-view-all.php">Car List</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-3" aria-controls="submenu-3"><i class="fa fa-fw fa-users"></i>Owner Management</a>
-                        <div id="submenu-3" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="owner-view-all.php">Owner List</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="add-new-owner.php">Add Owned Car (Admin Entry) </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-fw fa-key"></i>Owned Cars
-                            Management</a>
-                        <div id="submenu-4" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="ownedcar-view-all.php">Owned Car List</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="add-ownedcar.php">Add Owned Car (Admin Entry) </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="bookings-view-all.php" aria-expanded="false"><i
-                                class="fa fa-fw fa-calendar"></i>View Bookings</a>
-
-                    </li>
-                   
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                            data-target="#submenu-5" aria-controls="submenu-5"><i class="fa fa-fw fa-cubes"></i>Reports</a>
-                        <div id="submenu-5" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="report-registered-owners.php">Car Owners Report</a>
-                                </li>
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="car-brands.php">Brand Management</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="car-view-all.php">Car List</a>
-                                </li> -->
-                            </ul>
-                        </div>
+                        <a class="nav-link" href="customers-view-all.php" aria-expanded="false"><i
+                                class="fa fa-fw fa-users"></i>Customer Management</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="reset-password.php" aria-expanded="false"><i

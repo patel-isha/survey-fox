@@ -1,7 +1,11 @@
 <!doctype html>
 <html lang="en">
 <?php include 'includes/header.php'; ?>
+<?php
+include "../config/connection.php";
+$LoginID = $_SESSION['customer_uid'];
 
+?>
 
 
 <body>
@@ -79,20 +83,23 @@
                                 <div class="card-body">
 
                                     <?php
-                                    include "../config/connection.php";
-
+                                   
                                     // Handle the search
                                     $searchTerm = isset($_POST['txtSearch']) ? $_POST['txtSearch'] : '';
 
-                                    $sql = "SELECT sur.*, cm.* FROM `tbl_surveys` sur left join category_master cm on cm.MasId = sur.CategoryId 
-                                    WHERE ( sur.Name like '%$searchTerm%' or cm.Title  like  '%$searchTerm%') ";
+                                    $sql = "SELECT sur.*, cm.* ,
+                                    (select count(*) from tbl_surveyresponses sr where sr.Surveyid= sur.Surveyid ) as ResponseCnt
+                                    FROM `tbl_surveys` sur left join category_master cm on cm.MasId = sur.CategoryId 
+                                    WHERE CustomerId=$LoginID and  
+                                    ( sur.Name like '%$searchTerm%' or cm.Title  like  '%$searchTerm%') ";
                                     
                                     $result = $conn->query($sql);
 
                                     // Check if there are rows in the result
                                     if ($result->num_rows > 0) {
                                         echo '<table class="table table-hover"> <thead><tr><th scope="col">#</th>
-                                    <th scope="col">Survey Name</th> <th scope="col">Category</th> <th scope="col">Edit</th> 
+                                    <th scope="col">Survey Name</th> <th scope="col">Category</th> <th scope="col">Edit</th>
+                                    <th scope="col">Total Responses</th> 
                                     </tr></thead><tbody>';
 
                                         while ($row = $result->fetch_assoc()) {
@@ -101,6 +108,7 @@
                                         <td>" . $row["Name"] . "</td>
                                         <td>" . $row["Title"] . "</td>
                                         <td><a href='edit-survey.php?id=" . $row["Surveyid"] . "'><i class='fa fa-fw fa-edit'></i></a></td>
+                                        <td><a href='respondants-view-all.php?sid=" . $row["Surveyid"] . "'><b>".$row["ResponseCnt"]." <i class='fa fa-fw fa-cubes' title='View Respondants & Survey'></i></a></td>
                                         </tr>";
 
                                         }

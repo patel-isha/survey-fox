@@ -1,6 +1,6 @@
 <div class="dashboard-header">
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
-        <a class="navbar-brand" href="dashboard.php">Rento</a>
+        <a class="navbar-brand" href="index.php">Rento</a>
         <!-- <div class="d-flex w-100 justify-content-end">
             <a class="breadcrumb" href="#"><i class="fas fa-user mr-2"></i>
                 <?php session_start();

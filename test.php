@@ -18,11 +18,11 @@ include 'include/header-links.php';
 <body>
     <!-- MultiStep Form -->
     <div class="container-fluid" id="grad1">
-        <div class="row justify-content-center mt-0">
+        <div class="row justify-content-center align-items-center h-inherit mt-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card px-0 pb-0 mt-3 mb-3">
-                    <div class="bg-theme pt-2 pb-2 br8">
-                        <img src="assets/img/logo/logo.png" class="m-auto w-30">
+                    <div class="bg-white pt-2 br8">
+                        <img src="assets/img/logo/logo.png" class="m-auto w-25">
                     </div>
                     <div class="row">
                         <div class="col-md-12 mx-0">
@@ -37,8 +37,7 @@ include 'include/header-links.php';
                                     <li id="step6"></li>
 
                                 </ul>
-                                <h2 class="title-color"><strong>E-Commerce & Business <span
-                                            class="orange">Survey</span></strong></h2>
+                                <h3 class="navy-blue"><strong>E-Commerce & Business <span class="light-blue">Survey</span></strong></h3>
                                 <!-- fieldsets -->
                                 <fieldset name="step1">
                                     <div class="form-card">
@@ -56,17 +55,16 @@ include 'include/header-links.php';
                                                 better online shopping experience for everyone.</p>
                                         </div>
                                     </div>
-                                    <input type="button" name="next" class="next action-button" value="Begin Survey"
-                                        style="background: #5b8930; width: auto;" />
+                                    <input type="button" name="next" class="next action-button" value="Begin Survey" style="background: #5b8930; width: auto;" />
                                 </fieldset>
                                 <fieldset name="step2">
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">Full name</h6>
-                                            <input type="text" class="form-control" name="txtFullname" id="txtFullname"  required>
+                                            <h6 class="navy-blue mb-3">Full name</h6>
+                                            <input type="text" class="form-control" name="txtFullname" id="txtFullname" required>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">Email</h6>
+                                            <h6 class="navy-blue mb-3">Email</h6>
                                             <input type="text" class="form-control" name="txtEmail" id="txtEmail" required>
                                         </div>
                                         <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
@@ -75,272 +73,227 @@ include 'include/header-links.php';
                                     </div>
                                     <!-- <input type="button" name="previous" class="previous action-button-previous"
                                         value="Previous" /> -->
-                                    <input type="button" class="action-button" value="Enroll"
-                                        onClick="EnrollSurvey();" />
+                                    <input type="button" class="action-button" value="Enroll" onClick="EnrollSurvey();" />
                                 </fieldset>
                                 <fieldset name="step3">
                                     <div class="form-card">
 
                                         <div class="mb-30">
-                                            <h6 class="title-color">1) Consumer Profile: Which of the following best
+                                            <h6 class="navy-blue">1) Consumer Profile: Which of the following best
                                                 describes your role in e-commerce?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" value="Online shopper" name="eCommerceRole"
-                                                        qid="35" checked>Online shopper</label>
+                                                <label><input type="radio" value="Online shopper" name="eCommerceRole" qid="35" checked>Online shopper</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" value="Small business owner" qid="35"
-                                                        name="eCommerceRole">Small business owner</label>
+                                                <label><input type="radio" value="Small business owner" qid="35" name="eCommerceRole">Small business owner</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" value="Entrepreneur" qid="35"
-                                                        name="eCommerceRole">Entrepreneur</label>
+                                                <label><input type="radio" value="Entrepreneur" qid="35" name="eCommerceRole">Entrepreneur</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" value="E-commerce platform manager" qid="35"
-                                                        name="eCommerceRole">E-commerce platform manager</label>
+                                                <label><input type="radio" value="E-commerce platform manager" qid="35" name="eCommerceRole">E-commerce platform manager</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color">2) Frequency of Online Transactions: How often do
+                                            <h6 class="navy-blue">2) Frequency of Online Transactions: How often do
                                                 you engage in online transactions?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36"
-                                                        value="Daily" checked>Daily</label>
+                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36" value="Daily" checked>Daily</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36"
-                                                        value="Weekly">Weekly</label>
+                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36" value="Weekly">Weekly</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36"
-                                                        value="Monthly">Monthly</label>
+                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36" value="Monthly">Monthly</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36"
-                                                        value="Rarely">Rarely</label>
+                                                <label><input type="radio" name="onlineTransactionFrequency" qid="36" value="Rarely">Rarely</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">3) Preferred E-commerce Platforms: Which
+                                            <h6 class="navy-blue mb-3">3) Preferred E-commerce Platforms: Which
                                                 platform do you most frequently use for online purchases?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="preferredEcommerce" value="Amazon"
-                                                        qid="37" checked>Amazon</label>
+                                                <label><input type="radio" name="preferredEcommerce" value="Amazon" qid="37" checked>Amazon</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="preferredEcommerce" qid="37"
-                                                        value="eBay">eBay</label>
+                                                <label><input type="radio" name="preferredEcommerce" qid="37" value="eBay">eBay</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="preferredEcommerce" qid="37"
-                                                        value="Etsy">Etsy</label>
+                                                <label><input type="radio" name="preferredEcommerce" qid="37" value="Etsy">Etsy</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="preferredEcommerce" qid="37"
-                                                        value="Shopify">Shopify</label>
+                                                <label><input type="radio" name="preferredEcommerce" qid="37" value="Shopify">Shopify</label>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- <input type="button" name="previous" class="previous action-button-previous"
                                         value="Previous" /> -->
-                                    <input type="button" name="next" class="next action-button" value="Next"
-                                        onClick="SaveData('step2');" />
+                                    <input type="button" name="next" class="next action-button" value="Next" onClick="SaveData('step2');" />
                                 </fieldset>
                                 <fieldset name="step4">
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">4) Factors Influencing Online Purchases: What
+                                            <h6 class="navy-blue mb-3">4) Factors Influencing Online Purchases: What
                                                 most influences your decision to purchase items online?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlinePurchase" value="Price" qid="38"
-                                                        checked>Price</label>
+                                                <label><input type="radio" name="onlinePurchase" value="Price" qid="38" checked>Price</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlinePurchase" qid="38"
-                                                        value="Product reviews/ratings">Product reviews/ratings</label>
+                                                <label><input type="radio" name="onlinePurchase" qid="38" value="Product reviews/ratings">Product reviews/ratings</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlinePurchase" qid="38"
-                                                        value="Brand reputation">Brand reputation</label>
+                                                <label><input type="radio" name="onlinePurchase" qid="38" value="Brand reputation">Brand reputation</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="onlinePurchase" qid="38"
-                                                        value="Shipping options">Shipping options</label>
+                                                <label><input type="radio" name="onlinePurchase" qid="38" value="Shipping options">Shipping options</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">5) Preferred Payment Methods: How do you prefer
+                                            <h6 class="navy-blue mb-3">5) Preferred Payment Methods: How do you prefer
                                                 to pay for online purchases?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="paymentMethod" qid="39"
-                                                        value="Credit/debit card" checked>Credit/debit card</label>
+                                                <label><input type="radio" name="paymentMethod" qid="39" value="Credit/debit card" checked>Credit/debit card</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="paymentMethod" qid="39"
-                                                        value="Paypal">Paypal</label>
+                                                <label><input type="radio" name="paymentMethod" qid="39" value="Paypal">Paypal</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="paymentMethod" qid="39"
-                                                        value="Mobile payment apps">Mobile payment apps</label>
+                                                <label><input type="radio" name="paymentMethod" qid="39" value="Mobile payment apps">Mobile payment apps</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="paymentMethod" qid="39"
-                                                        value="Bank transfer">Bank transfer</label>
+                                                <label><input type="radio" name="paymentMethod" qid="39" value="Bank transfer">Bank transfer</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">6) Market Analysis: What methods do you use to
+                                            <h6 class="navy-blue mb-3">6) Market Analysis: What methods do you use to
                                                 conduct market research for your business?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketAnalysis" qid="40"
-                                                        value="Surveys and interviews" checked>Surveys and
+                                                <label><input type="radio" name="marketAnalysis" qid="40" value="Surveys and interviews" checked>Surveys and
                                                     interviews</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketAnalysis" qid="40"
-                                                        value="Competitive analysis">Competitive analysis</label>
+                                                <label><input type="radio" name="marketAnalysis" qid="40" value="Competitive analysis">Competitive analysis</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketAnalysis" qid="40"
-                                                        value="Industry reports and studies">Industry reports and
+                                                <label><input type="radio" name="marketAnalysis" qid="40" value="Industry reports and studies">Industry reports and
                                                     studies</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketAnalysis" qid="40"
-                                                        value="Online analytics tools">Online analytics tools</label>
+                                                <label><input type="radio" name="marketAnalysis" qid="40" value="Online analytics tools">Online analytics tools</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="button" name="previous" class="previous action-button-previous"
-                                        value="Previous" />
-                                    <input type="button" name="finish" class="action-button-danger"
-                                        value="Finish & Exit" />
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <input type="button" name="finish" class="action-button-danger" value="Finish & Exit" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
                                 <fieldset name="step5">
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">7) Business Performance: How would you rate
+                                            <h6 class="navy-blue mb-3">7) Business Performance: How would you rate
                                                 your business's performance in the past year?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" value="Excellent"
-                                                        qid="41" checked>Excellent</label>
+                                                <label><input type="radio" name="businessPerformance" value="Excellent" qid="41" checked>Excellent</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="41"
-                                                        value="Good">Good</label>
+                                                <label><input type="radio" name="businessPerformance" qid="41" value="Good">Good</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="41"
-                                                        value="Average">Average</label>
+                                                <label><input type="radio" name="businessPerformance" qid="41" value="Average">Average</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="41"
-                                                        value="Below average">Below average</label>
+                                                <label><input type="radio" name="businessPerformance" qid="41" value="Below average">Below average</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">8) Marketing Strategies: Which marketing
+                                            <h6 class="navy-blue mb-3">8) Marketing Strategies: Which marketing
                                                 channels do you primarily use to promote your business?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" qid="42"
-                                                        value="Surveys and interviews" checked>Surveys and
+                                                <label><input type="radio" name="marketingStrategies" qid="42" value="Surveys and interviews" checked>Surveys and
                                                     interviews</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" qid="42"
-                                                        value="Competitive analysis">Competitive analysis</label>
+                                                <label><input type="radio" name="marketingStrategies" qid="42" value="Competitive analysis">Competitive analysis</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" qid="42"
-                                                        value="Industry reports and studies">Industry reports and
+                                                <label><input type="radio" name="marketingStrategies" qid="42" value="Industry reports and studies">Industry reports and
                                                     studies</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="marketingStrategies" qid="42"
-                                                        value="Online analytics tools">Online analytics tools</label>
+                                                <label><input type="radio" name="marketingStrategies" qid="42" value="Online analytics tools">Online analytics tools</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">9) Customer Relations: How do you gather
+                                            <h6 class="navy-blue mb-3">9) Customer Relations: How do you gather
                                                 feedback from your customers?</h6>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" value="Excellent"
-                                                        qid="43" checked>Excellent</label>
+                                                <label><input type="radio" name="businessPerformance" value="Excellent" qid="43" checked>Excellent</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="43"
-                                                        value="Good">Good</label>
+                                                <label><input type="radio" name="businessPerformance" qid="43" value="Good">Good</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="43"
-                                                        value="Average">Average</label>
+                                                <label><input type="radio" name="businessPerformance" qid="43" value="Average">Average</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="businessPerformance" qid="43"
-                                                        value="Below average">Below average</label>
+                                                <label><input type="radio" name="businessPerformance" qid="43" value="Below average">Below average</label>
                                             </div>
                                         </div>
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">10) Future Planning: What are your primary
+                                            <h6 class="navy-blue mb-3">10) Future Planning: What are your primary
                                                 goals for business growth in the next year?</h6>
 
                                             <div class="radio">
-                                                <label><input type="radio" name="futurePlan" qid="44"
-                                                        value="Increase revenue" checked>Increase revenue</label>
+                                                <label><input type="radio" name="futurePlan" qid="44" value="Increase revenue" checked>Increase revenue</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="futurePlan" qid="44"
-                                                        value="Expand market reach">Expand market reach</label>
+                                                <label><input type="radio" name="futurePlan" qid="44" value="Expand market reach">Expand market reach</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="futurePlan" qid="44"
-                                                        value="Launch new products/services">Launch new
+                                                <label><input type="radio" name="futurePlan" qid="44" value="Launch new products/services">Launch new
                                                     products/services</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="futurePlan" qid="44"
-                                                        value="Improve customer retention">Improve customer
+                                                <label><input type="radio" name="futurePlan" qid="44" value="Improve customer retention">Improve customer
                                                     retention</label>
                                             </div>
                                             <div class="radio">
-                                                <label><input type="radio" name="futurePlan" qid="44"
-                                                        value="Enhance operational efficiency">Enhance operational
+                                                <label><input type="radio" name="futurePlan" qid="44" value="Enhance operational efficiency">Enhance operational
                                                     efficiency</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="button" name="previous" class="previous action-button-previous"
-                                        value="Previous" />
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
                                 <fieldset name="step6">
                                     <div class="form-card">
                                         <div class="mb-30">
-                                            <h6 class="title-color mb-3">Tell us more about any suggestions?</h6>
-                                            <textarea class="form-control" rows="5" name="txtSuggestions"
-                                                qid=""></textarea>
+                                            <h6 class="navy-blue mb-3">Tell us more about any suggestions?</h6>
+                                            <textarea class="form-control" rows="5" name="txtSuggestions" qid=""></textarea>
                                         </div>
                                     </div>
-                                    <input type="button" name="previous" class="previous action-button-previous"
-                                        value="Previous" />
-                                    <input type="button" name="finish" class="action-button-danger"
-                                        value="Finish & Exit" />
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <input type="button" name="finish" class="action-button-danger" value="Finish & Exit" />
                                     <input type="button" name="next" class="next action-button" value="Next" />
                                 </fieldset>
 
                                 <fieldset name="step7">
                                     <div class="form-card">
                                         <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-3">
-                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
-                                                    class="fit-image">
+                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
                                             </div>
                                         </div>
-                                        <br><br>
+                                        <div class="row justify-content-center mt-3">
+                                            <div class="col-6 text-center">
+                                                <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                            </div>
+                                        </div>
+                                        <br>
                                         <div class="row justify-content-center">
                                             <div class="col-7 text-center">
                                                 <h5>You Have Successfully Completed The Survey</h5>
@@ -354,6 +307,9 @@ include 'include/header-links.php';
                 </div>
             </div>
         </div>
+        <footer class="text-center mt-5">
+            <p class="mb-0 pb-2 text-white">Powered by Survey Fox</p>
+        </footer>
     </div>
 
     <?php
@@ -407,7 +363,7 @@ include 'include/header-links.php';
                 url: 'enrollsurvey.php?sid=' + sid,
                 type: 'POST',
                 data: data,
-                success: function (response) {
+                success: function(response) {
                     // Handle success response
                     var responseData = JSON.parse(response);
                     if (responseData.success) {
@@ -423,7 +379,7 @@ include 'include/header-links.php';
                         console.error(responseData.message);
                     }
                 },
-                error: function (xhr, status, error) {
+                error: function(xhr, status, error) {
                     // Handle error
                     console.error(xhr.responseText);
                 }
@@ -448,7 +404,7 @@ include 'include/header-links.php';
             var QuestionArray = [];
 
             // Iterate through each input element with the 'qid' attribute
-            $("input[qid]:visible").each(function () {
+            $("input[qid]:visible").each(function() {
                 var queid = $(this).attr('qid');
                 var answer = $(this).val();
 
@@ -467,11 +423,11 @@ include 'include/header-links.php';
                     SurveyId: ptId,
                     questionArray: QuestionArray
                 },
-                success: function (response) {
+                success: function(response) {
                     // Handle success response
                     console.log(response);
                 },
-                error: function (xhr, status, error) {
+                error: function(xhr, status, error) {
                     // Handle error
                     console.error(xhr.responseText);
                 }

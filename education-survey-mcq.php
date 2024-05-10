@@ -14,8 +14,8 @@ include 'include/header-links.php';
 <body>
     <!-- MultiStep Form -->
     <div class="container-fluid" id="grad1">
-        <div class="row justify-content-center mt-0">
-            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+        <div class="row justify-content-center align-items-center h-inherit mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0">
                 <?php
                 if (isset($_GET['sid'])) {
 
@@ -32,16 +32,15 @@ include 'include/header-links.php';
                         $sur_row = $result->fetch_assoc();
                 ?>
                         <div class="card px-0 pb-0 mt-3 mb-3">
-                            <div class="bg-theme pt-2 pb-2 br8">
+                            <div class="bg-white pt-2 br8">
                                 <?php
                                 if (strlen($sur_row['Logo']) > 0) {
 
-                                    echo "<img src='siteimages/company/" . $sur_row['Logo'] . "' class='m-auto w-30' alt='" . $sur_row['CompanyName'] . "'>";
+                                    echo "<img src='siteimages/company/" . $sur_row['Logo'] . "' class='m-auto w-25' alt='" . $sur_row['CompanyName'] . "'>";
                                 } else {
-                                    echo "<h2 class='title-color text-white'><strong>" . $sur_row['CompanyName'] . "</strong></h2>";
+                                    echo "<h2 class='navy-blue text-white'><strong>" . $sur_row['CompanyName'] . "</strong></h2>";
                                 }
                                 ?>
-
                             </div>
                             <div class="row">
                                 <div class="col-md-12 mx-0">
@@ -57,22 +56,20 @@ include 'include/header-links.php';
                                             <li id="step6"></li>
                                             <li id="step7"></li>
                                         </ul>
-
-                                        <h2 class="title-color"><strong><?php echo $sur_row['Name']; ?> <span class="orange">Survey</span></strong></h2>
+                                        <h3 class="navy-blue"><strong><?php echo $sur_row['Name']; ?> <span class="light-blue">Survey</span></strong></h3>
                                         <!-- fieldsets -->
                                         <fieldset name="step0">
-                                            <div class="typewriter">
-                                                <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
-                                                    <span class="wrap"></span>
-
-                                                </div>
+                                            <div class="typewriter mb-1">
+                                                <h4 class="tagline mb-2 line1">Embark on a Journey with our Survey Experience</h4>
+                                                <h4 class="tagline light-blue line2 mb-2 hidden">Your feedback matters!</h4>
                                             </div>
-                                            <div class="form-card pb-0">
-                                                <p>
-                                                    <?php echo $sur_row['Description']; ?>
-                                                    <img src="assets/img/logo/landing.png" alt="Description of the image" style="width: 100%; height: auto;">
-                                                </p>
-
+                                            <div class="form-card text-center pb-0 h-280px overflowy-auto">
+                                                <?php if ($sur_row['Description']) { ?>
+                                                    <p class="mb-1">
+                                                        <?php echo $sur_row['Description']; ?>
+                                                    </p>
+                                                <?php } ?>
+                                                <img src="assets/img/logo/landing.png" alt="Description of the image" class="w-40">
                                             </div>
                                             <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
                                         </fieldset>
@@ -96,7 +93,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">1) What is your age group?</h6>
+                                                    <h6 class="navy-blue">1) What is your age group?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optAge" checked value="Under 18" qid="24">Under 18</label>
                                                     </div>
@@ -120,9 +117,9 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color">2) What is your highest level of education?</h6>
+                                                    <h6 class="navy-blue">2) What is your highest level of education?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optHighEdu" checked value="High School" qid="25">High School</label>
+                                                        <label><input type="radio" name="optHighEdu" value="High School" qid="25">High School</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optHighEdu" value="Bachelor Degree" qid="25">Bachelor Degree</label>
@@ -140,15 +137,15 @@ include 'include/header-links.php';
                                                 </div>
                                             </div>
                                             <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                            <input type="button" name="next" class="next action-button" value="Next" />
+                                            <input type="button" name="next" onclick="saveDataAndSend('step2');" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step3">
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">3) What is your primary field of interest?</h6>
+                                                    <h6 class="navy-blue mb-3">3) What is your primary field of interest?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPrimaryInterest" checked value="Education" qid="26">Education</label>
+                                                        <label><input type="radio" name="optPrimaryInterest" value="Education" qid="26">Education</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optPrimaryInterest" value="Cultural" qid="26">Cultural</label>
@@ -159,10 +156,10 @@ include 'include/header-links.php';
                                                 </div>
                                                 <!-- radio button -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">4) Have you attended any programs or courses
+                                                    <h6 class="navy-blue mb-3">4) Have you attended any programs or courses
                                                         offered by our institute?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optPastProg" checked value="Yes" qid="27">Yes</label>
+                                                        <label><input type="radio" name="optPastProg" value="Yes" qid="27">Yes</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optPastProg" value="No" qid="27">No</label>
@@ -173,7 +170,7 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">5) If yes, please rate the overall quality of
                                                         the programs/courses.</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optQArating" checked value="Excellent" qid="28">Excellent</label>
+                                                        <label><input type="radio" name="optQArating" value="Excellent" qid="28">Excellent</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optQArating" value="Good" qid="28">Good</label>
@@ -187,7 +184,7 @@ include 'include/header-links.php';
                                                 </div>
                                             </div>
                                             <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                            <input type="button" name="next" class="next action-button" value="Next" />
+                                            <input type="button" name="next" onclick="saveDataAndSend('step3');" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step4">
                                             <div class="form-card">
@@ -218,7 +215,7 @@ include 'include/header-links.php';
                                                         provided by our institute? (e.g., libraries, labs, cultural centers)
                                                     </h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRatings" checked value="Excellent" qid="30">Excellent</label>
+                                                        <label><input type="radio" name="optRatings" value="Excellent" qid="30">Excellent</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optRatings" value="Good" qid="30">Good</label>
@@ -234,13 +231,13 @@ include 'include/header-links.php';
                                                     <h6 class="title-color">8) How do you typically stay informed about
                                                         institute events and updates?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Email newsletters" qid="31">Email newsletters</label>
+                                                        <label><input type="radio" name="optInfo" value="Email newsletters" qid="31">Email newsletters</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Social media" qid="31">Social media</label>
+                                                        <label><input type="radio" name="optInfo" value="Social media" qid="31">Social media</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Website" qid="31">Website</label>
+                                                        <label><input type="radio" name="optInfo" value="Website" qid="31">Website</label>
                                                     </div>
 
                                                     <div class="radio">
@@ -259,7 +256,7 @@ include 'include/header-links.php';
                                             <div class="form-card">
                                                 <!-- checkbox -->
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">9) How satisfied are you with the frequency and
+                                                    <h6 class="navy-blue mb-3">9) How satisfied are you with the frequency and
                                                         clarity of communication from our institute?</h6>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optSatisfaction" checked value="Very satisfied" qid="32">Very satisfied</label>
@@ -335,7 +332,7 @@ include 'include/header-links.php';
                                                 ?>
 
                                                         <div class="mb-30">
-                                                            <h6 class="title-color mb-3"><?php echo $Index ?>)
+                                                            <h6 class="navy-blue mb-3"><?php echo $Index ?>)
                                                                 <?php echo $row['Question'] ?>
                                                             </h6>
 
@@ -353,7 +350,7 @@ include 'include/header-links.php';
                                                                 // Loop through the array
                                                                 foreach ($valueArray as $value) {
                                                                     echo "<div class='radio'>
-                                                            <label><input type='radio' name='rdn$Qid' checked value='$value'
+                                                            <label><input type='radio' name='rdn$Qid' value='$value'
                                                                     qid='$Qid'>$value</label>
                                                         </div>";
                                                                 }
@@ -379,6 +376,7 @@ include 'include/header-links.php';
 
 
                                                 <?php
+
                                                         $Index = $Index + 1;
                                                     }
 
@@ -389,8 +387,8 @@ include 'include/header-links.php';
                                                 ?>
 
                                                 <div class="mb-30">
-                                                    <h6 class="title-color mb-3">Give us feedback or suggestion (if any)</h6>
-                                                    <textarea class="form-control" rows="3" id="txtSuggestion" name="txtSuggestion"></textarea>
+                                                    <h6 class="navy-blue mb-3">Give us feedback or suggestion (if any)</h6>
+                                                    <textarea class="form-control" rows="3" id="txtSuggestion" qid="57" name="txtSuggestion"></textarea>
 
                                                 </div>
                                             </div>
@@ -398,32 +396,27 @@ include 'include/header-links.php';
                                             <input type="button" name="next" class="next action-button" value="Finish" />
                                         </fieldset>
                                         <fieldset name="step7">
-                                    <div class="form-card">
-                                        <h2 class="fs-title text-center">Success !</h2>
-                                        <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-3">
-                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                            <div class="form-card">
+                                                <h2 class="fs-title text-center">Success !</h2>
+                                                <br>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-3">
+                                                        <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center mt-3">
+                                                    <div class="col-6 text-center">
+                                                        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-7 text-center">
+                                                        <h5>You Have Successfully Completed The Survey</h5>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row justify-content-center mt-3">
-        <div class="col-6 text-center">
-        
-        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button">Open to View Winnings</a>
-
-
-
-        
-                                        </div>
-                                        </div>
-                                        <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-7 text-center">
-                                                <h5>You Have Successfully Completed The Survey</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                        </fieldset>
                                     </form>
                                 </div>
                             </div>
@@ -439,6 +432,9 @@ include 'include/header-links.php';
                 ?>
             </div>
         </div>
+        <footer class="text-center mt-5">
+            <p class="mb-0 pb-2 text-white">Powered by Survey Fox</p>
+        </footer>
     </div>
     <?php
     include 'include/footer-scripts.php';
@@ -515,6 +511,53 @@ include 'include/header-links.php';
             // Show the next step
             var nextStep = document.querySelector('fieldset[name="step2"]');
             nextStep.style.display = 'block';
+        }
+    </script>
+
+    <script>
+        function saveDataAndSend(fieldID) {
+            var formDataArray = [];
+            var fieldset = $('fieldset[name="' + fieldID + '"]');
+            var ResponsID = $('#hdnMainEnrollId').val();
+
+            // Loop through selected input elements within the fieldset
+            fieldset.find('input:checked, input[type="text"], select, textarea').each(function() {
+                var fieldName = $(this).attr('name');
+                var qidValue = $(this).attr('qid'); // Retrieve the qid attribute value
+                var value = $(this).val();
+
+                if (fieldName !== "txtFullname") {
+                    // Debug information
+                    console.log("Fieldname- " + fieldName + " -- qid-" + qidValue + "--" + value);
+
+                    // Store field name, qid, and value in a field data object
+                    var fieldData = {
+                        qid: qidValue,
+                        answer: value,
+                        SR_Id: ResponsID
+                    };
+
+                    // Push the field data object into the formDataArray
+                    formDataArray.push(fieldData);
+                }
+            });
+
+            console.log(formDataArray);
+
+            // Send data to the server using AJAX
+            $.ajax({
+                url: 'save_answers.php',
+                type: 'POST',
+                data: {
+                    formData: formDataArray
+                },
+                success: function(response) {
+                    console.log('Data saved successfully:', response);
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error:', error);
+                }
+            });
         }
     </script>
 </body>
