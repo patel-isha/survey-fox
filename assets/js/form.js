@@ -156,8 +156,8 @@ $(document).ready(function () {
 
       // Data to be sent via AJAX
       var data = {
-        fullName: 1, // as table supports integer change the name and email to static integer values for testing
-        email: 2,
+        fullName: fullName, // as table supports integer change the name and email to static integer values for testing
+        email: email,
         sid: sid,
       }
 
