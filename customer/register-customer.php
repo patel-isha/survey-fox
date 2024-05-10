@@ -39,7 +39,7 @@
     <div class="splash-container" width="100%">
         <div class="card ">
             <div class="card-header text-center"><a href="../index.php"><img class="logo-img"
-                        src="../images/logo.png" alt="logo" width="150px"></a><span
+                        src="../assets/img/logo/logo-blue.png" alt="logo" width="150px"></a><span
                     class="splash-description">Customer Registration</span></div>
             <div class="card-body">
                 <form method="post">

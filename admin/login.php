@@ -43,7 +43,7 @@ if (isset($_POST['txtUsername'])) {
     <link href="../siteimages/dash/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../siteimages/dash/assets/libs/css/style.css">
     <link rel="stylesheet" href="../siteimages/dash/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="icon" type="image/x-icon" href="../siteimages/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.png">
     <style>
     html,
     body {
@@ -67,7 +67,7 @@ if (isset($_POST['txtUsername'])) {
     <!-- ============================================================== -->
     <div class="splash-container">
         <div class="card ">
-            <div class="card-header text-center"><a href="../index.php"><img class="logo-img" src="../assets/img/logo/logo.png" alt="logo" width="150px"></a><span class="splash-description">Administrative Portal</span></div>
+            <div class="card-header text-center"><a href="../index.php"><img class="logo-img" src="../assets/img/logo/logo-blue.png" alt="logo" width="150px"></a><span class="splash-description">Administrative Portal</span></div>
             <div class="card-body">
             <span class="text-danger">
                     <?php if (isset($error_message))
