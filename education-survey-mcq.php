@@ -41,48 +41,55 @@ include 'include/header-links.php';
                                     echo "<h2 class='navy-blue text-white'><strong>" . $sur_row['CompanyName'] . "</strong></h2>";
                                 }
                                 ?>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mx-0">
-                                    <form id="msform">
-                                        <!-- progressbar -->
-                                        <ul id="progressbar">
-                                            <li class="active" id="step0"></li>
-                                            <li id="step1"></li>
-                                            <li id="step2"></li>
-                                            <li id="step3"></li>
-                                            <li id="step4"></li>
-                                            <li id="step5"></li>
-                                            <li id="step6"></li>
-                                            <li id="step7"></li>
-                                        </ul>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="step0"></li>
+                                    <li id="step1"></li>
+                                    <li id="step2"></li>
+                                    <li id="step3"></li>
+                                    <li id="step4"></li>
+                                    <li id="step5"></li>
+                                    <li id="step6"></li>
+                                    <li id="step7"></li>
+                                </ul>
+
                                         <h3 class="navy-blue"><strong><?php echo $sur_row['Name']; ?> <span class="light-blue">Survey</span></strong></h3>
                                         <!-- fieldsets -->
                                         <fieldset name="step0">
-                                            <div class="typewriter mb-1">
-                                                <h4 class="tagline mb-2 line1">Embark on a Journey with our Survey Experience</h4>
-                                                <h4 class="tagline light-blue line2 mb-2 hidden">Your feedback matters!</h4>
-                                            </div>
-                                            <div class="form-card text-center pb-0 h-280px overflowy-auto">
-                                                <?php if ($sur_row['Description']) { ?>
-                                                    <p class="mb-1">
-                                                        <?php echo $sur_row['Description']; ?>
-                                                    </p>
-                                                <?php } ?>
-                                                <img src="assets/img/logo/landing.png" alt="Description of the image" class="w-40">
-                                            </div>
-                                            <input type="button" name="next" class="next action-button w-25" value="Begin Survey" />
-                                        </fieldset>
+                                            <div class="typewriter mb-3">
+                                                <div class="typewrite display-4" style="font-size: 2.5rem!important; height: 20%!important" data-period="2000" data-type='[ "Embark on a Journey with our Survey Experience", "Your feedback matters!"]'>
+                                                    <span class="wrap"></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-card pb-0">
+                                        <p>
+                                                <?php echo $sur_row['Description']; ?>
+                                                <img src="assets/img/logo/landing.png"  alt="Description of the image"
+                                                style="width: 100%; height: auto;">
+                                                            </p>
+
+                                    </div>
+                                    <input type="button" name="next" class="next action-button w-25"
+                                        value="Begin Survey" />
+                                </fieldset>
 
                                         <fieldset name="step1">
                                             <div class="form-card">
                                                 <div class="mb-30">
                                                     <label for="txtFullname">Full name:</label>
-                                                    <input type="text" class="form-control" id="txtFullname" name="txtFullname" placeholder="Please enter your full name" required>
+                                                    <input type="text" class="form-control" id="txtFullname" name="txtFullname"
+                                                        placeholder="Please enter your full name" required>
                                                 </div>
                                                 <div class="mb-30">
                                                     <label for="txtEmail">Email Id:</label>
-                                                    <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Please enter your email id" required>
+                                                    <input type="email" class="form-control" id="txtEmail" name="txtEmail"
+                                                        placeholder="Please enter your email id" required>
                                                 </div>
                                                 <input type="hidden" id="hdnMainEnrollId" name="generatedId" value="">
                                             </div>
@@ -95,7 +102,8 @@ include 'include/header-links.php';
                                                 <div class="mb-30">
                                                     <h6 class="navy-blue">1) What is your age group?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optAge" checked value="Under 18" qid="24">Under 18</label>
+                                                        <label><input type="radio" name="optAge" checked value="Under 18"
+                                                                qid="24">Under 18</label>
                                                     </div>
                                                     <div class="radio">
                                                         <label><input type="radio" name="optAge" value="18 to 24" qid="24">18 to
@@ -241,15 +249,19 @@ include 'include/header-links.php';
                                                     </div>
 
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Posters/flyers" qid="31">Posters/flyers</label>
+                                                        <label><input type="radio" name="optInfo" checked value="Posters/flyers"
+                                                                qid="31">Posters/flyers</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optInfo" checked value="Other" qid="31">Other (please specify)</label>
-                                                        <input type="text" class="form-control mt-2 ml-20" qid="31" name="qid31other">
+                                                        <label><input type="radio" name="optInfo" checked value="Other"
+                                                                qid="31">Other (please specify)</label>
+                                                        <input type="text" class="form-control mt-2 ml-20" qid="31"
+                                                            name="qid31other">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                value="Previous" />
                                             <input type="button" name="make_payment" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step5">
@@ -259,16 +271,20 @@ include 'include/header-links.php';
                                                     <h6 class="navy-blue mb-3">9) How satisfied are you with the frequency and
                                                         clarity of communication from our institute?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" checked value="Very satisfied" qid="32">Very satisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" checked
+                                                                value="Very satisfied" qid="32">Very satisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Satisfied" qid="32">Satisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" value="Satisfied"
+                                                                qid="32">Satisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Dissatisfied" qid="32">Dissatisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction" value="Dissatisfied"
+                                                                qid="32">Dissatisfied</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optSatisfaction" value="Very dissatisfied" qid="32">Very dissatisfied</label>
+                                                        <label><input type="radio" name="optSatisfaction"
+                                                                value="Very dissatisfied" qid="32">Very dissatisfied</label>
                                                     </div>
                                                 </div>
                                                 <!-- radio button -->
@@ -276,14 +292,17 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">10) Do you feel our institute promotes
                                                         diversity and inclusion effectively?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" checked value="Yes" qid="33">Yes</label>
+                                                        <label><input type="radio" name="optFeelProm" checked value="Yes"
+                                                                qid="33">Yes</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optFeelProm" value="No" qid="33">No</label>
+                                                        <label><input type="radio" name="optFeelProm" value="No"
+                                                                qid="33">No</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                            <input type="button" name="previous" class="previous action-button-previous"
+                                                value="Previous" />
                                             <input type="button" name="next" class="next action-button" value="Next" />
                                         </fieldset>
                                         <fieldset name="step6">
@@ -293,19 +312,24 @@ include 'include/header-links.php';
                                                     <h6 class="title-color mb-3">11) How likely are you to recommend our
                                                         institute or website to others?</h6>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" checked value="Very likely" qid="34">Very likely</label>
+                                                        <label><input type="radio" name="optRecommend" checked
+                                                                value="Very likely" qid="34">Very likely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Likely" qid="34">Likely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Likely"
+                                                                qid="34">Likely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Neutral" qid="34">Neutral</label>
+                                                        <label><input type="radio" name="optRecommend" value="Neutral"
+                                                                qid="34">Neutral</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Unlikely" qid="34">Unlikely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Unlikely"
+                                                                qid="34">Unlikely</label>
                                                     </div>
                                                     <div class="radio">
-                                                        <label><input type="radio" name="optRecommend" value="Very unlikely" qid="34">Very unlikely</label>
+                                                        <label><input type="radio" name="optRecommend" value="Very unlikely"
+                                                                qid="34">Very unlikely</label>
                                                     </div>
                                                 </div>
                                                 <!-- questions dynamic -->
@@ -329,7 +353,7 @@ include 'include/header-links.php';
 
                                                     $Index = 12;
                                                     while ($row = $result->fetch_assoc()) {
-                                                ?>
+                                                        ?>
 
                                                         <div class="mb-30">
                                                             <h6 class="navy-blue mb-3"><?php echo $Index ?>)
@@ -376,7 +400,7 @@ include 'include/header-links.php';
 
 
                                                 <?php
-
+                                        
                                                         $Index = $Index + 1;
                                                     }
 
@@ -390,38 +414,41 @@ include 'include/header-links.php';
                                                     <h6 class="navy-blue mb-3">Give us feedback or suggestion (if any)</h6>
                                                     <textarea class="form-control" rows="3" id="txtSuggestion" qid="57" name="txtSuggestion"></textarea>
 
-                                                </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Finish" />
+                                </fieldset>
+                                <fieldset name="step7">
+                                    <div class="form-card">
+                                        <h2 class="fs-title text-center">Success !</h2>
+                                        <br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                                                    class="fit-image">
                                             </div>
-                                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                                            <input type="button" name="next" class="next action-button" value="Finish" />
-                                        </fieldset>
-                                        <fieldset name="step7">
-                                            <div class="form-card">
-                                                <h2 class="fs-title text-center">Success !</h2>
-                                                <br>
-                                                <div class="row justify-content-center">
-                                                    <div class="col-3">
-                                                        <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-center mt-3">
-                                                    <div class="col-6 text-center">
-                                                        <a href="#" id="viewInvoiceLink" class="btn btn-primary action-button w-75">View Your Invoice</a>
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <div class="row justify-content-center">
-                                                    <div class="col-7 text-center">
-                                                        <h5>You Have Successfully Completed The Survey</h5>
-                                                    </div>
-                                                </div>
+                                        </div>
+                                        <div class="row justify-content-center mt-3">
+                                            <div class="col-6 text-center">
+                                                <a href="#" id="viewInvoiceLink"
+                                                    class="btn btn-primary action-button w-75">View Your Invoice</a>
                                             </div>
-                                        </fieldset>
-                                    </form>
-                                </div>
-                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5>You Have Successfully Completed The Survey</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
                         </div>
-                        <!-- Main survey end statement -->
+                    </div>
+                </div>
+                <!-- Main survey end statement -->
                 <?php
                     } else {
                         echo "Survey not found.";
@@ -475,33 +502,33 @@ include 'include/header-links.php';
                 sid: sid
             };
 
-            // Send data to PHP script using AJAX
-            $.ajax({
-                url: 'enrollsurvey.php?sid=' + sid,
-                type: 'POST',
-                data: data,
-                success: function(response) {
-                    // Handle success response
-                    var responseData = JSON.parse(response);
-                    if (responseData.success) {
-                        // Access the inserted ID and store it in a hidden field
-                        var insertedId = responseData.inserted_id;
-                        $("#hdnMainEnrollId").val(insertedId);
+        // Send data to PHP script using AJAX
+        $.ajax({
+            url: 'enrollsurvey.php?sid=' + sid,
+            type: 'POST',
+            data: data,
+            success: function(response) {
+                // Handle success response
+                var responseData = JSON.parse(response);
+                if (responseData.success) {
+                    // Access the inserted ID and store it in a hidden field
+                    var insertedId = responseData.inserted_id;
+                    $("#hdnMainEnrollId").val(insertedId);
 
-                        console.log("Inserted ID: " + insertedId);
-                        // Move to the next step
-                        showNextStep();
-                    } else {
-                        // Handle failure
-                        console.error(responseData.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    // Handle error
-                    console.error(xhr.responseText);
+                    console.log("Inserted ID: " + insertedId);
+                    // Move to the next step
+                    showNextStep();
+                } else {
+                    // Handle failure
+                    console.error(responseData.message);
                 }
-            });
-        }
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.error(xhr.responseText);
+            }
+        });
+    }
 
         function showNextStep(stepname) {
             // Hide the current step
@@ -515,16 +542,17 @@ include 'include/header-links.php';
     </script>
 
     <script>
-        function saveDataAndSend(fieldID) {
-            var formDataArray = [];
-            var fieldset = $('fieldset[name="' + fieldID + '"]');
-            var ResponsID = $('#hdnMainEnrollId').val();
-
-            // Loop through selected input elements within the fieldset
-            fieldset.find('input:checked, input[type="text"], select, textarea').each(function() {
-                var fieldName = $(this).attr('name');
-                var qidValue = $(this).attr('qid'); // Retrieve the qid attribute value
-                var value = $(this).val();
+    
+    function saveDataAndSend(fieldID) {
+        var formDataArray = [];
+        var fieldset = $('fieldset[name="' + fieldID + '"]');
+        var ResponsID = $('#hdnMainEnrollId').val();
+       
+        // Loop through selected input elements within the fieldset
+        fieldset.find('input:checked, input[type="text"], select, textarea').each(function () {
+            var fieldName = $(this).attr('name');
+            var qidValue = $(this).attr('qid'); // Retrieve the qid attribute value
+            var value = $(this).val();
 
                 if (fieldName !== "txtFullname") {
                     // Debug information
@@ -542,23 +570,23 @@ include 'include/header-links.php';
                 }
             });
 
-            console.log(formDataArray);
-
-            // Send data to the server using AJAX
-            $.ajax({
-                url: 'save_answers.php',
-                type: 'POST',
-                data: {
-                    formData: formDataArray
-                },
-                success: function(response) {
-                    console.log('Data saved successfully:', response);
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error:', error);
-                }
-            });
-        }
+        console.log(formDataArray);
+        
+        // Send data to the server using AJAX
+        $.ajax({
+            url: 'save_answers.php',
+            type: 'POST',
+            data: {
+                formData: formDataArray
+            },
+            success: function (response) {
+                console.log('Data saved successfully:', response);
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+            }
+        });
+    }
     </script>
 </body>
 

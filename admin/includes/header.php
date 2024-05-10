@@ -12,7 +12,7 @@
      <link rel="stylesheet"
          href="../siteimages/dash/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
      <link rel="stylesheet" href="../siteimages/dash/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-     <link rel="icon" type="image/x-icon" href="../siteimages/images/favicon.ico">
+     <link rel="icon" type="image/x-icon" href="../assets/img/logo/favicon.png">
      <title>Administrative Dashboard</title>
      <?php
       session_start();
