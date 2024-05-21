@@ -30,18 +30,6 @@ if (isset($_GET['sid'])) {
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
-
-    <style>
-    @media screen {
-        .view-response {}
-    }
-
-    @media print {
-        .view-response {
-            display: none;
-        }
-    }
-    </style>
 </head>
 
 <body>
@@ -116,7 +104,7 @@ if (isset($_GET['sid'])) {
                                 <div class="card-body">
                                     <div class='text-right'>
                                         <button onclick='generateExcel()'
-                                            class='btn btn-space btn-sm btn-success'> Generate Excel</button>
+                                            class='btn btn-space btn-sm btn-success'> Export Excel</button>
                                     </div>
                                     <?php
                                     $Surveyid = $_GET['sid'];
@@ -163,7 +151,7 @@ if (isset($_GET['sid'])) {
                                         <td>" . $row["Email"] . "</td>
                                         <td><b>" . $row["AnswersCnt"] . " </b></td>
                                         <td><b>" . $row["CompletePercentage"] . " </b></td>
-                                        <td><a href='view-survey-answers.php?id=" . $row["SR_Id"] . "'><i class='fa fa-fw fa-edit'></i></a></td>
+                                        <td><a href='view-survey-answers.php?id=" . $row["SR_Id"] . "'><i class='fa fa-fw fa-eye'></i></a></td>
                                         <td><a onclick='deleteRow(".$row["SR_Id"].")'><i class='fa fa-fw fa-trash' title='Delete Respondant'></i></a></td>
                                         </tr>";
                                             $bID = $bID + 1;

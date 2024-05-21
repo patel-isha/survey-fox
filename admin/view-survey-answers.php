@@ -4,6 +4,9 @@
 include "../config/connection.php";
 ?>
 
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script>
+</head>
 
 <body>
     <!-- ============================================================== -->
@@ -49,11 +52,15 @@ include "../config/connection.php";
                                     $row = $result->fetch_assoc();
                                     ?>
 
-                    <div class="row">
+                    <div class="row" id="myTable">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="card">
                                 <h5 class="card-header"> Survey Answers of - <?php echo $row['RespondantName']; ?> </h5>
                                 <div class="card-body">
+                                <div class='text-right'>
+                                        <button onclick='generateExcel()'
+                                            class='btn btn-space btn-sm btn-success'> Export Excel</button>
+                                    </div>
                                 <?php
                                    
                                    
@@ -71,7 +78,7 @@ include "../config/connection.php";
 
                                    // Check if there are rows in the result
                                    if ($resultQry->num_rows > 0) {
-                                       echo '<table class="table table-hover"> <thead><tr><th scope="col">#</th>
+                                       echo '<table class="table table-hover" id=""> <thead><tr><th scope="col">#</th>
                                    <th scope="col">Question</th> <th scope="col">Answer</th> 
                                    </tr></thead><tbody>';
 
@@ -121,6 +128,28 @@ include "../config/connection.php";
     <!-- Optional JavaScript -->
     <?php include 'includes/footer-js.php'; ?>
 
+    <script>
+    function generateExcel() {
+        const table = document.getElementById('myTable');
+
+        // Hide "View Response" column
+        const viewResponseColumn = table.querySelectorAll('.view-response');
+        viewResponseColumn.forEach(function(column) {
+            column.style.display = 'none';
+        });
+
+        const wb = XLSX.utils.table_to_book(table, {
+            sheet: "SheetJS"
+        });
+
+        // Show "View Response" column again for the design
+        viewResponseColumn.forEach(function(column) {
+            column.style.display = ''; // Reset to default display value
+        });
+
+        XLSX.writeFile(wb, 'surveyanswer_list.xlsx');
+    }
+    </script>
 </body>
 
 </html>
